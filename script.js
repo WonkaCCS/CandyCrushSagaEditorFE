@@ -193,6 +193,12 @@ function addRequirement(isIngredient = false, ignoreLimit = false){
         option.value = "hazelnut"
         option.innerHTML = "hazelnut"
         select.appendChild(option)
+
+        option = document.createElement("option")
+        option.value = "butter"
+        option.innerHTML = "butter"
+        select.appendChild(option)
+
     }
     requirementsObj.prepend(section)
 }
@@ -1058,7 +1064,7 @@ function importLevel(levelData){
     document.getElementById("star3").value = scoreTargets[2] || ''
 
 
-    let ingredientOrder = {0: "hazelnut", 1: "cherry"}
+    let ingredientOrder = {0: "hazelnut", 1: "cherry", 3: "butter"}
     if (wantedMode.includes('Drop down') || wantedMode.includes('Drop Down')){
         (levelData.ingredients || []).forEach(function(quantity, index){
             try{
@@ -1067,7 +1073,7 @@ function importLevel(levelData){
                 }
                 let item = ingredientOrder[index]
 
-                addRequirement(true, true)
+                addRequirement(true, true, true)
 
                 let requirementNode = requirementsContainer.children[0]
                 let selectNode = requirementNode.querySelector("select")
@@ -1301,6 +1307,7 @@ function exportLevel(){
     if (currentMode.includes('Drop down') || currentMode.includes('Drop Down')){
         let hazelnuts = 0
         let cherries = 0
+        let butters = 0
 
         let requirementsContainer = document.getElementById("requirements")
         for (var i = 0; i < requirementsContainer.children.length; i++){
@@ -1328,13 +1335,16 @@ function exportLevel(){
             else if (item == "hazelnut"){
                 hazelnuts = quantity
             }
+            else if (item == "butter"){
+                butters = quantity
+            }
         }
 
         level.numIngredientsOnScreen = 1
         level.maxNumIngredientsOnScreen = parseInt(document.getElementById('maxNumIngredientsOnScreen').value) || 0
         level.ingredientSpawnDensity = parseInt(document.getElementById('ingredientSpawnDensity').value) || 0
 
-        level['ingredients'] = [hazelnuts, cherries]
+        level['ingredients'] = [hazelnuts, cherries, butters]
     }
 
     if (currentMode.includes('Order')){
