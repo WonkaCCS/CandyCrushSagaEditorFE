@@ -1064,7 +1064,7 @@ function importLevel(levelData){
     document.getElementById("star3").value = scoreTargets[2] || ''
 
 
-    let ingredientOrder = {0: "hazelnut", 1: "cherry", 3: "butter"}
+    let ingredientOrder = {0: "hazelnut", 1: "cherry", 2: "butter"}
     if (wantedMode.includes('Drop down') || wantedMode.includes('Drop Down')){
         (levelData.ingredients || []).forEach(function(quantity, index){
             try{
