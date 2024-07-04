@@ -8,7 +8,7 @@
         <link href="style.css" rel="stylesheet" type="text/css" />
         <script src="https://cdn.jsdelivr.net/npm/underscore@1.12.0/underscore-min.js"></script>
         
-        <meta content="Web Candy Crush Level Editor" property="og:title">
+        <meta content="Flash Level Editor" property="og:title">
         <meta content="Level editor for candy crush that can be used to export levels in your browser" property="og:description">
         <meta content="Candy Crush Level Editor" property="og:site_name">
         <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
@@ -347,6 +347,12 @@
                         <div class="selectelement" element="cake_bomb" gamelayer="normal"></div>
                         <div class="selectelement" element="shell_1" gamelayer="normal"></div>
                         <div class="selectelement" element="crystallized_licorice" gamelayer="normal"></div>
+                        <div class="selectelement" element="bubble_pop_1" gamelayer="normal"></div>
+                        <div class="selectelement" element="bubble_pop_2" gamelayer="normal"></div>
+                        <div class="selectelement" element="bubble_pop_3" gamelayer="normal"></div>
+                        <div class="selectelement" element="bubble_pop_4" gamelayer="normal"></div>
+                        <div class="selectelement" element="bubble_pop_5" gamelayer="normal"></div>
+                        <div class="selectelement" element="glass_tile_1" gamelayer="glass"></div>
                     </div>
 
                     <button class="dropdown" onclick="toggleDropdown(this)" associd="locks">
@@ -365,23 +371,7 @@
                         <div class="selectelement" element="mulock4" gamelayer="lock"></div>
                         <div class="selectelement" element="mulock5" gamelayer="lock"></div>
                     </div>
-<tr>
-    <td id="cell-0-0" class="cell" onclick="toggleConveyorBelt(0, 0)"></td>
-    <!-- Add more cells for the first row -->
-</tr>
-<!-- Add more rows and cells for the entire grid -->
 
-                    <button class="dropdown" onclick="toggleDropdown(this)" associd="shields">
-                        <div style="display: flex; justify-content: space-between;">
-                            <p class='BananaSplit' style="padding-left: 5%; ">Blocker Notes (Important)</p>
-                            <p class="arrow" style="display: inline; padding-right: 5%; transform: rotate(90deg);">&raquo</p>
-                          </div>
-                    </button>
-                    <div class="dropped" id="shields" style="display:none">
-                        <div class="selectelement" element="glass_tile_1" gamelayer="glass"></div>
-<div class="selectelement" element="glass_tile_2" gamelayer="glass"></div>
-
-                    </div>
 
                     <button class="dropdown" onclick="toggleDropdown(this)" associd="spawning">
                         <div style="display: flex; justify-content: space-between;">
