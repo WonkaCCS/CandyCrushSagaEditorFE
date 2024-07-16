@@ -1,4 +1,4 @@
-﻿<html>
+<html>
     <!-- Download stuff -->
     <head>
         <meta charset="utf-8">
@@ -25,14 +25,17 @@
             <div class="navbar">
                 <div style="display: flex; height: 105%;">
                     <div class="navbarflex">
-                        <button onclick="document.getElementById('creditsmenu').style.display = 'block'" style="margin: auto; display: block;" onclick=""><small>🍬</small>Credits</button>
+                        <button onclick="document.getElementById('creditsmenu').style.display = 'block'" style="margin: auto; display: block;" onclick=""></small>Credits & Help using blockers or candy cannons</button>
                         <button onclick="window.open('https://github.com/Blakiemon/Candy-Crush-Level-Editor')" style="margin: auto; display: block;" onclick="
-                        <button onclick="window.open('https://discord.gg/x2b3fv2SXs')">CCS Fanon Server</button>
+                        <button onclick="window.open('https://discord.gg/ZrKGprP7wp')">Editor's Discord Server</button>
                     </div>
                     <div class="navbarflex">
                     </div>
                     <div class="navbarflex">
+                        
                         <button style="margin: auto; display: block;" onclick="window.open('https://wonkaccs.github.io/CandyCrushSagaFE/?levelCode=' + JSON.stringify(exportLevel()), '_blank')">▶ Play Level</button>
+                        <button style="margin: auto; display: block;" onclick="window.open('https://wonkaccs.github.io/CandyCrushSagaFECanary/?levelCode=' + JSON.stringify(exportLevel()), '_blank')">▶ Play in Canary</button>
+                        
                         <button style="margin: auto; display: block;" onclick="exportLevelUI()">⏏ Export Level</button>
                         <button style="margin: auto; display: block;" onclick="displayImportLevelUI()"><small>⤵</small> Import Level</button>
                     </div>
@@ -90,7 +93,7 @@
                         <img src="ui/playmode_icon_orderdrop.png" style="max-width: 30px; max-height: 30px;">
                         <div class="break"></div>
                         <!-- <label class='DroidSans' style="color: white; text-align: center;">Order Ingredients</label> -->
-                        <input type="radio" id="orderingredientsoption" name="leveltype" value="Order Drop Down">
+                        <input type="radio" id="orderingredientsoption" name="leveltype" value="Order Drop">
                     </label>
                     <label class="leveltypelabel" for="jellytimeoption" style="margin: 5px;" onclick="selectMode()">
                         <img src="ui/playmode_icon_jellytime.png" style="max-width: 30px; max-height: 30px;">
@@ -113,8 +116,9 @@
                 </div>
                 <div class="sideoptions" id="moves-section">
                     <label for="moves" class='DroidSans' style="margin: 10px; display: block; color: white; text-align: center;">Moves:</label>
-                    <input style="width: 50px; text-align: center;" placeholder="20" type="number" name="moves" id="moves" name="moves"><br>
+                    <input style="width: 50px; text-align: center;" placeholder="15" type="number" name="moves" id="moves" name="moves"><br>
                 </div>
+                
                 <div class="sideoptions" id="time-section" style="display: none;">
                     <label for="time" class='DroidSans' style="margin: 10px; display: block; color: white; text-align: center;">Time (seconds):</label>
                     <input style="width: 50px; text-align: center;" placeholder="30" type="number" name="moves" id="time" name="time"><br>
@@ -352,7 +356,7 @@
                         <div class="selectelement" element="bubble_pop_3" gamelayer="normal"></div>
                         <div class="selectelement" element="bubble_pop_4" gamelayer="normal"></div>
                         <div class="selectelement" element="bubble_pop_5" gamelayer="normal"></div>
-                        <div class="selectelement" element="glass_tile_1" gamelayer="glass"></div>
+                        <div class="selectelement" element="blocker_note" gamelayer="glass"></div>
                     </div>
 
                     <button class="dropdown" onclick="toggleDropdown(this)" associd="locks">
@@ -436,39 +440,39 @@
 
         <div id="exportmenu" style="display: none;">
             <div class="popup">
-                <button onclick="document.getElementById('exportmenu').style.display = 'none'" style="position: absolute; right: 20; top: 20; border-radius: 10px; background-color: rgb(174, 174, 174); width: 30px; height: 30px">X</button>
-                <label for="exportfield" class='BananaSplit' style="margin: 0; width: 50%; height: 20px; border-radius: 10px; background-color: #353535; padding:0; display: block; color: white; text-align: center;">Exported Data:</label>
-                <textarea id="exportfield" name="exportfield" style="background-color: #464646; border: 2px solid #353535; width: 90%; height: 70%; resize: none; color: white;" readonly></textarea>
+                <button onclick="document.getElementById('exportmenu').style.display = 'none'" style="position: absolute; right: 20px; top: 20px; border-radius: 0px; background-color: rgb(174, 174, 174); width: 30px; height: 30px;">X</button>
+                <label for="exportfield" class="BananaSplit" style="margin: 0; width: 50%; height: 25px; border-radius: 0px; background-color: #353535; padding: 10; display: block; color: white; text-align: center;">Exported Data:</label>
+                <!-- Removed 'readonly' attribute from textarea -->
+                <textarea id="exportfield" name="exportfield" style="background-color: #464646; border: 2px solid #353535; width: 90%; height: 70%; resize: none; color: white;"></textarea>
             </div>
         </div>
+        
         <div id="importmenu" style="display: none;">
             <div class="popup" style="width: 30%; left: 35%;">
-                <button onclick="document.getElementById('importmenu').style.display = 'none'" style="position: absolute; right: 20; top: 20; border-radius: 10px; background-color: rgb(174, 174, 174); width: 30px; height: 30px">X</button>
-                <label for="importfield" class='BananaSplit' style="margin: 0; width: 50%; height: 20px; border-radius: 10px; background-color: #353535; padding:0; display: block; color: white; text-align: center;">Type In Level Code:</label>
+                <button onclick="document.getElementById('importmenu').style.display = 'none'" style="position: absolute; right: 20; top: 20; border-radius: 0px; background-color: rgb(174, 174, 174); width: 30px; height: 30px">X</button>
+                <label for="importfield" class='BananaSplit' style="margin: 0; width: 50%; height: 20px; border-radius: 0px; background-color: #353535; padding:0; display: block; color: white; text-align: center;">Waiting for level code...</label>
                 <div class="break"></div>
                 <textarea id="importfield" name="importfield" style="background-color: #464646; border: 2px solid #353535; width: 70%; height: 70%; resize: none; color: white;"></textarea>
                 <div class="break"></div>
-                <button onclick="importLevelUI()" style="border-radius: 5px; background-color: rgb(174, 174, 174); width: 30%; font-size: 1.1em;">Import Level</button>
+                <button onclick="importLevelUI()" style="border-radius: 0px; background-color: rgb(174, 174, 174); width: 30%; font-size: 1.1em;">Import Level</button>
                 <div class="break"></div>
                 <p class="BananaSplit" id="importerror" style="color: red; display: none; width: fit-content; height: fit-content;">Error: bruh</p>
             </div>
         </div>
         <div id="creditsmenu" style="display: none;">
             <div class="popup" style="height: 70%">
-                <button onclick="document.getElementById('creditsmenu').style.display = 'none'" style="position: absolute; right: 20; top: 20; border-radius: 10px; background-color: rgb(174, 174, 174); width: 30px; height: 30px">X</button>
-                <p class='BananaSplit' style="margin: 0; width: 50%; height: 20px; border-radius: 10px; background-color: #353535; padding:0; display: block; color: white; text-align: center;">Candy Crush Level Editor Credits:</p>
-                <p class="BananaSplit" style="color: lightcoral; width: fit-content; height: fit-content; text-align: center;">All right go to King Limited. <br>If they so chose this editor may be taken down at any time.</p>
-                <p class="DroidSans" style="color:honeydew; width: 80%; text-align: center; vertical-align: middle; background-color: #353535;  border-radius: 10px; display: inline-block;"><br>This editor was made by Blaki. You may feel free to fork it and do what you like with it as long as you credit me and King. <br><br>All other info below does not need to be included.<br>ㅤ</p>
+                <button onclick="document.getElementById('creditsmenu').style.display = 'none'" style="position: absolute; right: 20; top: 20; border-radius: 0px; background-color: rgb(174, 174, 174); width: 30px; height: 30px">X</button>
+                <p class='BananaSplit' style="margin: 0; width: 50%; height: 20px; border-radius: 0px; background-color: #353535; padding:0; display: block; color: white; text-align: center;">Candy Crush Level Editor Credits:</p>
+                <p class="BananaSplit" style="color: lightcoral; width: fit-content; height: fit-content; text-align: center;">All right go to King Limited. <br>This editor is running: Version 1.6 Flash Edition</p>
+                <p class="DroidSans" style="color:honeydew; width: 80%; text-align: center; vertical-align: middle; background-color: #353535;  border-radius: 0px; display: inline-block;"><br>This editor was made by Blaki, Fence, Ender_Pearl and Wonka. You may feel free to fork it and do what you like with it as long as you credit me and King. <br><br>To use blockers, use the pink sticky note at the end of the blockers section for every static blocker. This does not include Licorice Swirls and Locks. <br><br>To use Candy Cannons you need to know that the Maximum means the maximum amount of items there can be on the board. The Interval means that if you reached the maximum, and let's say the interval is two, the game will spawn another single unit of that item after two moves.<br>ㅤ</p>
                 <div class="break"></div>
                 <div class="break"></div>
-                <p style="color:navajowhite; width: 80%; text-align: center;">Come join the support server if you have any quality of life suggestions or bugs to share.</p>
-                <button onclick="window.open('https://discord.gg/37ND6RwjXM')">Editor Support Server</button>
+                <p style="color:navajowhite; width: 80%; text-align: center;">Come join the server to share your levels!.</p>
+                <button onclick="window.open('https://discord.gg/ZrKGprP7wp')">Candy Crush Custom Levels Hub</button>
                 <div class="break"></div>
                 <p style="color:navajowhite; width: 80%; text-align: center;">Or if you like my work, follow me on social media to see what else I've made.</p>
                 <div class="break"></div>
-                <button onclick="window.open('https://twitter.com/Blakiemon')"><img style="max-width: 16px;" src="https://abs.twimg.com/favicons/twitter.2.ico">My Twitter</button>
-                <button onclick="window.open('https://www.reddit.com/user/Zouten')"><img style="max-width: 16px;" src="https://www.redditstatic.com/desktop2x/img/favicon/ms-icon-144x144.png">My Reddit</button>
-                <button onclick="window.open('https://github.com/Blakiemon')"><img style="max-width: 16px;" src="https://github.githubassets.com/favicons/favicon.png">My Github</button>
+                
             </div>
         </div>
     </body>
