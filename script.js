@@ -4,7 +4,7 @@ const candy = {"044": "bomb", "043": "coconut_wheel", "061": "ufo"}
 const sugarCoats = {"134": "sugarcoat_1", "135": "sugarcoat_2", "136": "sugarcoat_3"}
 const locks = {"008": "licorice", "025": "marmalade", "038": "mulock1", "039": "mulock2", "040": "mulock3", "041": "mulock4", "042": "mulock5"}
 const glass = {"122": "glass_tile_1", "123": "glass_tile_2", "124": "glass_tile_3",}
-const blockers = {"007": "block_frosting", "053": "chocolate_frog", "009": "chocolate", "017": "licorice_square", "019": "block_multi_frosting1", "020": "block_multi_frosting2", "021": "block_multi_frosting3", "022": "block_multi_frosting4", "023": "block_multi_frosting5", "024": "chocolate_spawner", "035": "cake_bomb", "054": "shell_1", "062": "magic_mixer", "066": "bobber", "079": "block_waffle1", "080": "block_waffle2", "081": "block_waffle3", "082": "block_waffle4", "083": "block_waffle5", "094": "dark_chocolate_1", "095": "dark_chocolate_2", "096": "dark_chocolate_3", "097": "dark_chocolate_4", "098": "dark_chocolate_5", "129": "chain_layer1_c", "130": "chain_layer2_c", "131": "chain_layer3_c", "132": "chain_layer4_c", "133": "chain_layer5_c", "157": "shell_3", "158": "shell_2", "159": "bubble_pop_1", "160": "bubble_pop_2", "161": "bubble_pop_3", "162": "bubble_pop_4", "163": "bubble_pop_5", "211": "dark_chocolate_spawner_1", "212": "dark_chocolate_spawner_2", "213": "dark_chocolate_spawner_3", "220": "jelly_jar_1", "221": "jelly_jar_2", "037": "toffee_tornado", "070": "pinata", "073": "pinata_crash", "074": "pinata_link1", "075": "pinata_link2", "076": "pinata_link3", "077": "pinata_unbreakable", "078": "pinata_empty", "156": "rainbow_rapid_mold", "099": "crystallized_licorice"}
+const blockers = {"007": "block_frosting", "053": "chocolate_frog", "009": "chocolate", "017": "licorice_square", "019": "block_multi_frosting1", "020": "block_multi_frosting2", "021": "block_multi_frosting3", "022": "block_multi_frosting4", "023": "block_multi_frosting5", "024": "chocolate_spawner", "035": "cake_bomb", "054": "shell_1", "062": "magic_mixer", "066": "bobber", "079": "block_waffle1", "080": "block_waffle2", "081": "block_waffle3", "082": "block_waffle4", "083": "block_waffle5", "094": "dark_chocolate_1", "095": "dark_chocolate_2", "096": "dark_chocolate_3", "097": "dark_chocolate_4", "098": "dark_chocolate_5", "129": "chain_layer1_c", "130": "chain_layer2_c", "131": "chain_layer3_c", "132": "chain_layer4_c", "133": "chain_layer5_c", "157": "shell_3", "158": "shell_2", "159": "bubble_pop_1", "160": "bubble_pop_2", "161": "bubble_pop_3", "162": "bubble_pop_4", "163": "bubble_pop_5", "211": "dark_chocolate_spawner_1", "212": "dark_chocolate_spawner_2", "213": "dark_chocolate_spawner_3", "220": "jelly_jar_1", "221": "jelly_jar_2", "037": "toffee_tornado", "070": "pinata", "073": "pinata_crash", "074": "pinata_link1", "075": "pinata_link2", "076": "pinata_link3", "077": "pinata_unbreakable", "078": "pinata_empty", "156": "rainbow_rapid_mold"}
 const bonbon = {"182": "bonbon_colorbomb_1", "183": "bonbon_colorbomb_2", "184": "bonbon_colorbomb_3", "185": "bonbon_colorbomb_4", "186": "bonbon_horizontal_1", "187": 'bonbon_horizontal_2', "188": "bonbon_horizontal_3", "189": "bonbon_horizontal_4", "190": "bonbon_vertical_1", "191": "bonbon_vertical_2", "192": "bonbon_vertical_3", "193": "bonbon_vertical_4", "194": "bonbon_fish_1", "195": "bonbon_fish_2", "196": "bonbon_fish_3", "197": "bonbon_fish_4", "198": "bonbon_wrapped_1", "199": "bonbon_wrapped_2", "200": "bonbon_wrapped_3", "201": "bonbon_wrapped_4"}
 const tiles = {"empty": "empty", "000": "none", "001": "grid", "003": "jelly", "004": "jelly2", "064": "blue_tile", "065": "black_tile"}
 const ingredients = {"048": "cherry", "126": "hazelnut", "920": "butter"}
@@ -19,7 +19,7 @@ const rainbowcannonright = {"155":"rainbow_rapid_cannon_right"}
 const cannons = {"027": "cannon_ingredient", "028": "cannon_licorice", "029": "cannon_bomb", "030": "cannon_mulock_key", "031": "cannon_mystery", "067": "cannon_chameleon", "068": "cannon_lucky", "069": "cannon_extra_time_and_moves", "071": "cannon_striped", "072": "cannon_wrapped_candy", "090": "cannon_block_waffle", "107": "cannon_striped_horizontal", "108": "cannon_striped_vertical", "127": "cannon_colorbomb", "128": "cannon_fish", "137": "cannon_sugar_coat", "214": "cannon_blue", "215": "cannon_green", "216": "cannon_orange", "217": "cannon_purple", "218": "cannon_red", "219": "cannon_yellow"}
 const path = {"140": "rainbow_stream_vertical", "141": "rainbow_stream_horizontal", "142": "rainbow_stream_BL", "143": "rainbow_stream_BR", "144": "rainbow_stream_TL", "145": "rainbow_stream_TR", "146": "rainbow_stream_TBL", "147": "rainbow_stream_TBR", "148": "rainbow_stream_TLR", "149": "rainbow_stream_BLR", "150": "rainbow_stream_all_directions", "151": "rainbow_stream_intersection_point"}
 const leaflayer = {"063":'leaf'}
-const leaflayer = {"006":'blocker_note'}
+const notes = {"006":'blocker_note'}
 
 //014 and 015 are unused ids so i'm using them to designate invisible porta;s
 const portalentrance = {'012':'portal_entrance','014':'portal_entrance_hidden'}
@@ -54,7 +54,6 @@ const layers = [
     "tile",
     "path",
     "leaf",
-    
     "portal_entrance",
     "portal_exit",
     "normal",
@@ -73,7 +72,7 @@ const layers = [
     "ingredients_exit",
     "candy_cannon",
     "candy_entrance",
-	"notes",
+    "notes",
     "selectimg"
 ]
 
@@ -171,7 +170,7 @@ function addRequirement(isIngredient = false, ignoreLimit = false){
         typeText = "Ingredient"
         section.setAttribute("reqtype", "ingredient")
     }
-    section.innerHTML = '<button style="left: 85%; border-radius: 10px; background-color: rgb(174, 174, 174); width: 30px; height: 30px" onclick="removeRequirement(this)">X</button> <p class="DroidSans break" style="font-weight: bold; color: white; text-align: center;">Requirement:</p> <img src="ui/hud/red.png" style="max-width: 30px; max-height: 30px;"> <p class="DroidSans" style="margin: 10px; display: block; color: white; text-align: center;">' + typeText + ':</p> <select onchange="switchedRequirement(this)"> </select> <div class="break"></div> <img src="ui/btn_quit.png" style="max-width: 30px; max-height: 30px;"> <p class="DroidSans" style="margin: 10px; display: block; color: white; text-align: center;">Amount:</p> <input style="width: 50px; text-align: center;" placeholder="0" type="number">'
+    section.innerHTML = '<button style="left: 85%; border-radius: 0px; background-color: rgb(174, 174, 174); width: 30px; height: 30px" onclick="removeRequirement(this)">X</button> <p class="DroidSans break" style="font-weight: bold; color: white; text-align: center;">Requirement:</p> <img src="ui/hud/red.png" style="max-width: 30px; max-height: 30px;"> <p class="DroidSans" style="margin: 10px; display: block; color: white; text-align: center;">' + typeText + ':</p> <select onchange="switchedRequirement(this)"> </select> <div class="break"></div> <img src="ui/btn_quit.png" style="max-width: 30px; max-height: 30px;"> <p class="DroidSans" style="margin: 10px; display: block; color: white; text-align: center;">Amount:</p> <input style="width: 50px; text-align: center;" placeholder="0" type="number">'
 
     select = section.querySelector("select")
     if (!isIngredient){
@@ -219,7 +218,7 @@ function addMixerOption(){
     section = document.createElement("div")
     section.classList.add("sideoptions")
     section.setAttribute("reqtype", "mixeroption")
-    section.innerHTML = '<button style="left: 85%; border-radius: 10px; background-color: rgb(174, 174, 174); width: 30px; height: 30px" onclick="removeRequirement(this)">X</button> <div class="break"></div> <img src="ui/hud/All Blockers.png" style="max-width: 30px; max-height: 30px;"> <p class="DroidSans" style="margin: 10px; display: block; color: white; text-align: center;">Blocker:</p> <select onchange="switchedMixerOption(this)"> </select> <div class="break"></div>'
+    section.innerHTML = '<button style="left: 85%; border-radius: 0px; background-color: rgb(174, 174, 174); width: 30px; height: 30px" onclick="removeRequirement(this)">X</button> <div class="break"></div> <img src="ui/hud/All Blockers.png" style="max-width: 30px; max-height: 30px;"> <p class="DroidSans" style="margin: 10px; display: block; color: white; text-align: center;">Blocker:</p> <select onchange="switchedMixerOption(this)"> </select> <div class="break"></div>'
 
     select = section.querySelector("select")
 
@@ -246,7 +245,7 @@ function selectMode(){
 
     document.getElementById("requirements-options-section").style.display = "none"
 
-    if (mode.includes('Drop down') || mode.includes('Drop Down')) {
+    if (mode.includes('Drop down') || mode.includes('Drop Down') || mode.includes('Order Drop')) {
         document.getElementById("requirements-options-section").style.display = "block"
         document.getElementById("addingredient").style.display = "block"
     } else {
@@ -1027,6 +1026,7 @@ function importLevel(levelData){
     //Set moves & time
     document.getElementById("moves").value = levelData.moveLimit || ""
     document.getElementById("time").value = levelData.timeLimit || ""
+    
 
     //Set preferred colors
     let colorspref = document.getElementById("colorspref-section")
@@ -1044,7 +1044,8 @@ function importLevel(levelData){
             }
         }
     }
-
+    
+    
     //Add requirements
     let requirementsContainer = document.getElementById("requirements")
 
@@ -1068,7 +1069,7 @@ function importLevel(levelData){
 
 
     let ingredientOrder = {0: "hazelnut", 1: "cherry", 2: "butter"}
-    if (wantedMode.includes('Drop down') || wantedMode.includes('Drop Down')){
+    if (wantedMode.includes('Drop down') || wantedMode.includes('Drop Down') || wantedMode.includes('Order Drop')){
         (levelData.ingredients || []).forEach(function(quantity, index){
             try{
                 if (quantity == 0){
@@ -1305,9 +1306,16 @@ function exportLevel(){
         }
 
         level['moveLimit'] = moves
+        
     }
+    
+    
 
-    if (currentMode.includes('Drop down') || currentMode.includes('Drop Down')){
+
+
+
+
+    if (currentMode.includes('Drop down') || currentMode.includes('Drop Down') || currentMode.includes('Order Drop')){
         let hazelnuts = 0
         let cherries = 0
         let butters = 0
