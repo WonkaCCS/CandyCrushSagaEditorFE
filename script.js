@@ -25,7 +25,7 @@ const leaflayer = {"006":'blocker_note'}
 const portalentrance = {'012':'portal_entrance','014':'portal_entrance_hidden'}
 const portalexit = {'013':'portal_exit','015':'portal_exit_hidden'}
 
-const elements_ids = Object.assign({}, portalentrance, portalexit, rainbowcannontop, rainbowcannonbottom, rainbowcannonleft, rainbowcannonright, leaflayer, colors, cannons, walldown, wallup, bonbon, path, wallright, wallleft, coloredCandy, candy, blockers, tiles, ingredients, sugarCoats, locks, glass, {"010": "ingredients_exit", "026": "candy_entrance", "005": "candy_cannon"})
+const elements_ids = Object.assign({}, portalentrance, portalexit, rainbowcannontop, rainbowcannonbottom, rainbowcannonleft, rainbowcannonright, leaflayer, colors, cannons, walldown, wallup, bonbon, path, wallright, wallleft, coloredCandy, candy, blockers, tiles, ingredients, sugarCoats, locks, glass, notes, {"010": "ingredients_exit", "026": "candy_entrance", "005": "candy_cannon"})
 const elements_names = _.invert(elements_ids)
 
 const stretched = ["009", "019", "020", "021", "022", "023", "025", "006", "123", "124", "134", "135", "136", "054", "157", "158", "024", "211", "212", "213", "220", "221", "159", "160", "161", "162", "163", "062"].concat(Object.keys(bonbon))
