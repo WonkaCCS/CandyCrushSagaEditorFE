@@ -94,6 +94,7 @@ const layerElements = {
     "rainbow_cannon_right":[].concat(Object.keys(rainbowcannonright)),
     "ingredients_exit": ["010"],
     "candy_entrance": ["026"],
+    "notes":[].concat(Object.keys(notes)),
     "candy_cannon": ["005"].concat(Object.keys(cannons)),
     "portal_entrance":[].concat(Object.keys(portalentrance)),
     "portal_exit":[].concat(Object.keys(portalexit))
