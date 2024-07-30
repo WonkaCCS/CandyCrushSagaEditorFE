@@ -3,8 +3,8 @@ table, td, tr {
 }
 
 @font-face {
-    font-family: "DroidSans";
-    src: url(fonts/DroidSans_new.ttf);
+    font-family: "BananaSplit";
+    src: url(fonts/BananaSplit.ttf);
 }
 @font-face {
     font-family: "BananaSplit";
@@ -19,6 +19,7 @@ img[src=""] {
     position: relative;
     top: 0;
     left: 0;
+    
 }
 
 :root {
@@ -104,8 +105,8 @@ td .candy_cannon {
 }
 
 .colorselected, .elementselected, .preferredselected {
-    background-color: hsla(0, 0%, 100%, 0.565) !important;
-    border-radius: 5px;
+    background-color: hsla(0, 0%, 58%, 0.565) !important;
+    border-radius: 0px;
 }
 
 .buttons .dropdown{
@@ -189,6 +190,8 @@ img[src="elements/cake_top_right.png"], img[src="elements/cake_bottom_right.png"
     z-index: 3;
 }
 
+
+
 .sideselection {
     height: 95%; 
     width: 20%; 
@@ -263,7 +266,7 @@ img[src="elements/cake_top_right.png"], img[src="elements/cake_bottom_right.png"
 
 .dropped button:hover, .preferred:hover{
     background-color: hsla(0, 0%, 100%, 0.2);
-    border-radius: 5px;
+    border-radius: 0px;
 }
 
 #level .object {
@@ -327,6 +330,8 @@ img[src="elements/cake_top_right.png"], img[src="elements/cake_bottom_right.png"
     max-width:58px !important;
     max-height:50px !important;
 }
+
+
 
 .navbar {
     overflow: hidden;
@@ -495,9 +500,9 @@ img[src="elements/cake_top_right.png"], img[src="elements/cake_bottom_right.png"
     margin-right: 20%;
     margin-left: 20%;
     margin-top: 0;
-    margin-bottom: 0;
+    margin-bottom: 10;
     width: 60vw;
-    height: 100%;
+    height: 105%;
     padding: 0;
     top: 0;
     left: 0;
@@ -515,7 +520,7 @@ img[src="elements/cake_top_right.png"], img[src="elements/cake_bottom_right.png"
     left: 30%;
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
-    border-radius: 10px;
+    border-radius: 0px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
