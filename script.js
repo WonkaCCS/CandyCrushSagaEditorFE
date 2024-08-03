@@ -21,13 +21,14 @@ const path = {"140": "rainbow_stream_vertical", "141": "rainbow_stream_horizonta
 const leaflayer = {"063":'leaf'}
 const indicators = {"994":'vertical_indicator',"995":'horizontal_indicator',"996":'left_indicator', "997":'up_indicator', "998":'down_indicator', "999":'right_indicator'}
 const notes = {"006":'blocker_note'}
-const belts = {"991":'conveyor_belt_up',"992":'conveyor_belt_right',"993":'conveyor_belt_down',"994":'conveyor_belt_left',}
+const entry_note = {"012":'portal_entry_note'}
+const exit_note = {"013":'portal_exit_note'}
 
 //014 and 015 are unused ids so i'm using them to designate invisible porta;s
-const portalentrance = {'014':'portal_entrance','012':'portal_entrance_hidden'}
-const portalexit = {'015':'portal_exit','013':'portal_exit_hidden'}
+const portalentrance = {'990':'portal_entrance','014':'portal_entrance_hidden'}
+const portalexit = {'991':'portal_exit','015':'portal_exit_hidden'}
 
-const elements_ids = Object.assign({}, portalentrance, portalexit, rainbowcannontop, rainbowcannonbottom, rainbowcannonleft, rainbowcannonright, indicators, leaflayer, belts,  colors, cannons, walldown, wallup, bonbon, path, wallright, wallleft, coloredCandy, candy, blockers, tiles, ingredients, sugarCoats, locks, glass, notes, {"010": "ingredients_exit", "026": "candy_entrance", "005": "candy_cannon"})
+const elements_ids = Object.assign({}, portalentrance, portalexit, rainbowcannontop, rainbowcannonbottom, rainbowcannonleft, rainbowcannonright, indicators, leaflayer,  colors, cannons, walldown, wallup, bonbon, path, wallright, wallleft, coloredCandy, candy, blockers, tiles, ingredients, sugarCoats, locks, glass, notes, entry_note, exit_note, {"010": "ingredients_exit", "026": "candy_entrance", "005": "candy_cannon"})
 const elements_names = _.invert(elements_ids)
 
 const stretched = ["009", "019", "020", "021", "022", "023", "025", "006", "123", "124", "134", "135", "136", "054", "157", "158", "024", "211", "212", "213", "220", "221", "159", "160", "161", "162", "163", "062"].concat(Object.keys(bonbon))
@@ -58,7 +59,6 @@ const layers = [
     "leaf",
     "portal_entrance",
     "portal_exit",
-    "belts",
     "normal",
     "bonbonoverlay",
     "sugarcoat",
@@ -76,6 +76,8 @@ const layers = [
     "ingredients_exit",
     "candy_cannon",
     "candy_entrance",
+    "exit_note",
+    "entry_note",
     "notes",
     "selectimg"
 ]
@@ -84,7 +86,6 @@ const layerElements = {
     "tile": [].concat(Object.keys(tiles)),
     "path": [].concat(Object.keys(path)),
     "leaf":[].concat(Object.keys(leaflayer)),
-    "belts": [].concat(Object.keys(belts)),
     "normal": [].concat(Object.keys(colors), Object.keys(coloredCandy), Object.keys(candy), Object.keys(blockers), Object.keys(ingredients), Object.keys(bonbon)),
     "sugarcoat": [].concat(Object.keys(sugarCoats)),
     "lock": [].concat(Object.keys(locks)),
@@ -101,6 +102,8 @@ const layerElements = {
     "ingredients_exit": ["010"],
     "candy_entrance": ["026"],
     "notes":[].concat(Object.keys(notes)),
+    "entry_note":[].concat(Object.keys(entry_note)),
+    "exit_note":[].concat(Object.keys(exit_note)),
     "candy_cannon": ["005"].concat(Object.keys(cannons)),
     "portal_entrance":[].concat(Object.keys(portalentrance)),
     "portal_exit":[].concat(Object.keys(portalexit))
@@ -773,25 +776,17 @@ function updateTile(object){
         image.src = elementsFolder + elements_ids[selectedElement] + ".png"
 
         //switch to other portal if one is placed
-        if (selectedElement=='014') {
+        if (selectedElement=='990') {
             updateSelection(false,'portal_exit','portal_exit')
-        } else if (selectedElement == '012') {
+        } else if (selectedElement == '014') {
             updateSelection(false,'portal_exit_hidden','portal_exit')
-        } else if (selectedElement=='015') {
+        } else if (selectedElement=='991') {
             isPortalTimeout=true
             updateSelection(false,'portal_entrance','portal_entrance')
-        } else if (selectedElement == '013') {
+        } else if (selectedElement == '015') {
             isPortalTimeout=true
             updateSelection(false,'portal_entrance_hidden','portal_entrance')
         }
-
-
-
-
-
-
-
-
     } else {
         object.setAttribute(elementLayer, selectedElement)
         image.src = elementsFolder + elements_ids[selectedElement] + ".png"
@@ -945,11 +940,9 @@ function importLevel(levelData){
                     if (objectId === '084') objectId='050'
 
                     //portals are dealt with later
-                    if (objectId === '011' || objectId==='014'||objectId==='015'||objectId==='012'||objectId==='013') {
+                    if (objectId === '011' || objectId==='990'||objectId==='991'||objectId==='014'||objectId==='015') {
                         return
                     }
-
-
 
                     if (objectId == "035"){
                         if (blacklistedCake.includes(String(rIndex) + String(cIndex))){
@@ -989,9 +982,9 @@ function importLevel(levelData){
                 //console.log(portal)
                 elementLayer = 'portal_entrance'
                 if (portal[0][2]==14) {
-                    selectedElement = '013'
+                    selectedElement = '990'
                 } else {
-                    selectedElement = '015'
+                    selectedElement = '014'
                 }
                 
                 try {
@@ -1006,15 +999,11 @@ function importLevel(levelData){
 
                 elementLayer = 'portal_exit'
                 if (portal[1][2]==14) {
-                    selectedElement = '012'
+                    selectedElement = '991'
                 } else {
-                    selectedElement = '014'
+                    selectedElement = '015'
                 }
                 
-
-
-
-
                 try {
                     updateTile([].slice.call(childrenRows[portal[1][1]].children)[portal[1][0]])
                     isPortalTimeout=false
@@ -1257,22 +1246,20 @@ function exportLevel(){
                     }
                 }
 
-
-
-                if (element=="015" || element=="013") {
-                    //element="011013"
+                if (element=="991" || element=="015") {
+                    //element="011991"
                 }
 
-                if (element=="014" || element=="012") {
+                if (element=="990" || element=="014") {
                     let row2 = parseInt(object.getAttribute('portalexitrow'))
                     let col2 = parseInt(object.getAttribute('portalexitcol'))
                     let portal = [[i,levelArray.length],[col2,row2]]
-                    if (element=='014') {
+                    if (element=='990') {
                         portal[0][2]=14
                         portal[1][2]=14
                     }
                     level.portals.push(portal)
-                    //element='011012'
+                    //element='011990'
                 }
 
                 if (!totalCode.includes(element) && element != ""){
