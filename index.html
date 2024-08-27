@@ -115,6 +115,15 @@
                         <!-- <label class='DroidSans' style="color: white; text-align: center;"><s>Drop Time</s></label> -->
                         <input type="radio" id="droptimeoption" name="leveltype" value="Drop Time">
                     </label>
+
+                </label>
+
+                <label class="leveltypelabel" for="supermixedoption" style="margin: 5px;" onclick="selectMode()">
+                    <img src="ui/playmode_icon_super_mixed.png" style="max-width: 30px; max-height: 30px;">
+                    <div class="break"></div>
+                    <!--  <label class='DroidSans' style="color: white; text-align: center;"><s>Drop Time</s></label> -->
+                    <input type="radio" id="supermixedoption" name="leveltype" value="Super Mixed">
+                </label>
                     
 
 
@@ -168,9 +177,20 @@
 
 
                 <div class="sideoptions">
-                    <label for="moves" class='DroidSans' style="margin: 10px; display: block; color: white; text-align: center;">Disable Starting Boosters:</label>
+                    <label for="moves" class='DroidSans' style="margin: 10px; display: block; color: white; text-align: center;">Disable Starting Boosters? (Broken)
+                    </label>
                     <input style="text-align: center;" type="checkbox" name="disablebooster" id="disablebooster">
                 </div>
+
+
+
+                <div class="sideoptions">
+                    <label for="moves" class='DroidSans' style="margin: 10px; display: block; color: white; text-align: center;">Enable Sugar Track?</label>
+                    <input style="text-align: center;" type="checkbox" name="enablesugardrops" id="enablesugardrops">
+                </div>
+
+
+
 
                 <div class="sidetitle">
                     <p class='BananaSplit' style="font-weight: bold; text-align: center; color: blueviolet;">Dreamworld:</p>
@@ -526,9 +546,9 @@
         <div id="creditsmenu" style="display: none;">
             <div class="popup" style="height: 70%">
                 <button onclick="document.getElementById('creditsmenu').style.display = 'none'" style="position: absolute; right: 20; top: 20; border-radius: 0px; background-color: rgb(174, 174, 174); width: 30px; height: 30px">X</button>
-                <p class='BananaSplit' style="margin: 0; width: 50%; height: 20px; border-radius: 0px; background-color: #353535; padding:0; display: block; color: white; text-align: center;">Candy Crush Level Editor Credits:</p>
-                <p class="BananaSplit" style="color: lightcoral; width: fit-content; height: fit-content; text-align: center;">All right go to King Limited. <br>This editor is running: Version 1.6 Build 5700 Flash Edition</p>
-                <p class="DroidSans" style="color:honeydew; width: 80%; text-align: center; vertical-align: middle; background-color: #353535;  border-radius: 0px; display: inline-block;"><br>This editor was made by Blaki, Fence, Ender_Pearl and Wonka. You may feel free to fork it and do what you like with it as long as you credit me and King. <br><br>To use blockers, use the pink sticky note at the end of the blockers section for every static blocker. This does not include Licorice Swirls and Locks. <br><br>To use Candy Cannons you need to know that the Maximum means the maximum amount of items there can be on the board. The Interval means that if you reached the maximum, and let's say the interval is two, the game will spawn another single unit of that item after two moves.<br>To use teleporters, place a pink teleporter note on the exit teleporter and a blue one on the entry teleporter.<br>ㅤ</p>
+                <p class='BananaSplit' style="margin: 0; width: 80%; height: 20px; border-radius: 0px; background-color: #353535; padding:0; display: block; color: white; text-align: center;">Candy Crush Level Editor Credits:</p>
+                <p class="BananaSplit" style="color: lightcoral; width: fit-content; height: fit-content; text-align: center;">All right go to King Limited. <br>This editor is running: Version 1.6.1 Build 5800 Flash Edition</p>
+                <p class="DroidSans" style="color:honeydew; width: 80%; text-align: center; vertical-align: middle; background-color: #353535;  border-radius: 0px; display: inline-block;"><br>This editor was made by Blaki and then edited by Fence, Ender_Pearl and Wonka. You may feel free to fork it and do what you like with it as long as you credit me and King. <br><br>To use blockers, use the pink sticky note at the end of the blockers section for every static blocker. This does not include Licorice Swirls and Locks. <br><br>To use Candy Cannons you need to know that the Maximum means the maximum amount of items there can be on the board. The Interval means that if you reached the maximum, and let's say the interval is two, the game will spawn another single unit of that item after two moves.<br>To use teleporters, place a pink teleporter note on the exit teleporter and a blue one on the entry teleporter.<br>ㅤ</p>
                 <div class="break"></div>
                 <div class="break"></div>
                 <p style="color:navajowhite; width: 80%; text-align: center;">Come join the server to share your levels!</p>

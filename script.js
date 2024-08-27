@@ -256,7 +256,7 @@ function selectMode(){
 
     document.getElementById("requirements-options-section").style.display = "none"
 
-    if (mode.includes('Drop down') || mode.includes('Drop Down') || mode.includes('Order Drop') || mode.includes('Drop Time')) {
+    if (mode.includes('Drop down') || mode.includes('Drop Down') || mode.includes('Order Drop') || mode.includes('Super Mixed') || mode.includes('Drop Time')) {
         document.getElementById("requirements-options-section").style.display = "block"
         document.getElementById("addingredient").style.display = "block"
     } else {
@@ -269,7 +269,7 @@ function selectMode(){
         })
     }
 
-    if (mode.includes('Order')) {
+    if (mode.includes('Order') || mode.includes('Super Mixed')) {
         document.getElementById("requirements-options-section").style.display = "block"
         document.getElementById("addorder").style.display = "block"
     } else {
@@ -1074,6 +1074,13 @@ function importLevel(levelData){
         document.getElementById("disablebooster").checked = false
     }
 
+    try{
+        document.getElementById("enablesugardrops").checked = levelData.enableSugarTrack || true
+    } 
+    catch{
+        document.getElementById("enablesugardrops").checked = true
+    }
+
     //Set score targets
     let scoreTargets = levelData.scoreTargets || []
     document.getElementById("star1").value = scoreTargets[0] || ''
@@ -1082,7 +1089,7 @@ function importLevel(levelData){
 
 
     let ingredientOrder = {0: "hazelnut", 1: "cherry", 2: "butter"}
-    if (wantedMode.includes('Drop down') || wantedMode.includes('Drop Down') || wantedMode.includes('Order Drop')){
+    if (wantedMode.includes('Drop down') || wantedMode.includes('Drop Down') || wantedMode.includes('Super Mixed') || wantedMode.includes('Order Drop')){
         (levelData.ingredients || []).forEach(function(quantity, index){
             try{
                 if (quantity == 0){
@@ -1101,7 +1108,7 @@ function importLevel(levelData){
             }catch{}
         })
     }
-    if (wantedMode.includes('Order')){
+    if (wantedMode.includes('Order') || wantedMode.includes('Super Mixed')){
         (levelData._itemsToOrder || []).forEach(function(itemDict){
             try{
                 let item = itemDict['item']
@@ -1284,6 +1291,7 @@ function exportLevel(){
     level['preferredColors'] = preferredColors
 
     level['disablePreLevelBoosters'] = document.getElementById("disablebooster").checked
+    level['enableSugarTrack'] = document.getElementById("enablesugardrops").checked
     level['colorWeightAdjustments'] = [0]
 
     let star1 = Number(document.getElementById("star1").value) || 1000
@@ -1328,7 +1336,7 @@ function exportLevel(){
 
 
 
-    if (currentMode.includes('Drop down') || currentMode.includes('Drop Down') || currentMode.includes('Order Drop')){
+    if (currentMode.includes('Drop down') || currentMode.includes('Drop Down') || currentMode.includes('Super Mixed ') || currentMode.includes('Order Drop')){
         let hazelnuts = 0
         let cherries = 0
         let butters = 0
@@ -1371,7 +1379,7 @@ function exportLevel(){
         level['ingredients'] = [hazelnuts, cherries, butters]
     }
 
-    if (currentMode.includes('Order')){
+    if (currentMode.includes('Order') || currentMode.includes('Super Mixed')){
         let orders = []
         let requirementsContainer = document.getElementById("requirements")
         for (var i = 0; i < requirementsContainer.children.length; i++){
