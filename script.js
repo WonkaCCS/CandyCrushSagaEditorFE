@@ -1,5 +1,5 @@
 const colors = {"002": "random", "055": "red", "056": "yellow", "057": "blue", "058": "green", "059": "orange", "060": "purple"}
-const coloredCandy = {"002": "random", "018": "pepper_candy", "036": "frog", "045": "striped_horizontal", "046": "striped_vertical", "047": "wrapped", "049":"jellyfish", "051": "key", "052": "lucky", "032": "mystery", "033": "chameleon", "050": "extra_time_and_moves", "091": "jellyfish_striped", "092": "jellyfish_wrapped", "093": "jellyfish_colorbomb"}
+const coloredCandy = {"002": "random", "018": "pepper_candy", "036": "frog", "045": "striped_horizontal", "046": "striped_vertical", "047": "wrapped", "049":"jellyfish", "051": "key", "052": "lucky", "032": "mystery", "033": "chameleon", "050": "extra_time_and_moves", "091": "jellyfish_striped", "092": "jellyfish_wrapped", "093": "jellyfish_colorbomb", "235": "cracked_candy"}
 const candy = {"044": "bomb", "043": "coconut_wheel", "061": "ufo"}
 const sugarCoats = {"134": "sugarcoat_1", "135": "sugarcoat_2", "136": "sugarcoat_3"}
 const locks = {"008": "licorice", "025": "marmalade", "038": "mulock1", "039": "mulock2", "040": "mulock3", "041": "mulock4", "042": "mulock5"}
@@ -41,9 +41,9 @@ var selectedColor = "002"
 var selectedElement = "002"
 var elementLayer = "normal"
 
-const orderItems = {"1": "red", "2": "blue", "3": "yellow", "4": "orange", "5": "purple", "6": "green", "7": "wrapped", "8": "striped", "9": "colorbomb", "10": "striped + striped", "11": "striped + wrapped", "12": "striped + colorbomb", "13": "colorbomb + colorbomb", "14": "wrapped + colorbomb", "15": "wrapped + wrapped", "16": "chocolate", "17": "frosting", "18": "popcorn", "19": "licorice", "20": "pepper bomb", "21": "jellyfish (BROKEN)", "22": "cake bomb", "23": "mystery candy", "24": "magic mixer", "25": "BROKEN", "26": "BROKEN", "27": "BROKEN", "28": "BROKEN", "29": "BROKEN", "30": "BROKEN", "31": "BROKEN", "32": "bubblegum", "33": "BROKEN", "34": "BROKEN", "35": "BROKEN", "36": "BROKEN", "37": "BROKEN", "38": "BROKEN", "39": "BROKEN"}
+const orderItems = {"1": "red", "2": "blue", "3": "yellow", "4": "orange", "5": "purple", "6": "green", "7": "wrapped", "8": "striped", "9": "colorbomb", "10": "striped + striped", "11": "striped + wrapped", "12": "striped + colorbomb", "13": "colorbomb + colorbomb", "14": "wrapped + colorbomb", "15": "wrapped + wrapped", "16": "chocolate", "17": "frosting", "18": "popcorn", "19": "licorice", "20": "pepper bomb", "21": "jellyfish (BROKEN)", "22": "cake bomb", "23": "mystery candy", "24": "magic mixer", "32": "bubblegum"}
 
-const magicMixerItems = {"0": "All Blockers", "1":"pepper bomb", "2": "licorice", "3":"frosting (1 layer)", "4": "frosting (2 layers)", "5": "frosting (3 layers)", "6": "frosting (4 layers)", "7": "frosting (5 layers)", "8": "chocolate", "9": "licorice lock", "10": "marmalade", "11":"dark chocolate (1 layer)", "12": "dark chocolate (2 layers)", "13": "dark chocolate (3 layers)", "14":"crystal candy (1 layer)", "15":"crystal candy (2 layers)", "16":"crystal candy (3 layers)", "17": "toffee swirl (1 layer)", "18": "toffee swirl (2 layers)", "19": "toffee swirl (3 layers)", "20":"toffee swirl (4 layers)", "21":"toffee swirl (5 layers)", "22":"rainbow twist (1 layer)", "23":"rainbow twist (2 layers)", "24":"rainbow twist (3 layer)","25":"rainbow twist (4 layer)","26":"rainbow twist (5 layer)","27":"sugar coat (1 layer)","28":"sugar coat (2 layers)","29":"sugar coat (3 layers)","30":"bubblegum pop (1 layer)", "31":"bubblegum pop (2 layers)", "32":"bubblegum pop (3 layers)", "33":"bubblegum pop (4 layers)", "34":"bubblegum pop (5 layers)", "35":"color bomb bonbon blitz (one-charged)", "36":"color bomb bonbon blitz (two-charged)", "37":"color bomb bonbon blitz (three-charged)","38":"color bomb bonbon blitz (four-charged)", "39": "horizontal striped candy bonbon blitz (one-charged)", "40":"horizontal striped candy bonbon blitz (two-charged)", "41":"horizontal striped candy bonbon blitz (three-charged)","42":"horizontal striped candy bonbon blitz (four-charged)", "43":"vertical striped candy bonbon blitz (one-charged)", "44":"vertical striped candy bonbon blitz (two-charged)","45":"vertical striped candy bonbon blitz (three-charged)","46":"vertical striped candy bonbon blitz (four-charged)", "47":"jelly fish bonbon blitz (one charged)", "48":"jelly fish bonbon blitz (two charged)", "49":"jelly fish bonbon blitz (three charged)", "50":"jelly fish bonbon blitz (four charged)","51":"wrapped candy bonbon blitz (one-charged)","52":"wrapped candy bonbon blitz (two-charged)","53":"wrapped candy bonbon blitz (three-charged)","54":"wrapped candy bonbon blitz (four-charged)"}
+const magicMixerItems = {"0": "All Blockers", "1":"pepper bomb", "2": "licorice", "3":"frosting (1 layer)", "4": "frosting (2 layers)", "5": "frosting (3 layers)", "6": "frosting (4 layers)", "7": "frosting (5 layers)", "8": "chocolate", "9": "licorice lock", "10": "marmalade", "30":"bubblegum pop (1 layer)", "31":"bubblegum pop (2 layers)", "32":"bubblegum pop (3 layers)", "33":"bubblegum pop (4 layers)", "34":"bubblegum pop (5 layers)", "55":"popcorn", "56":"single mystery blocker", "57":"mystery blocker (1 layered)", "58":"mystery blocker (2 layered)", "59":"mystery blocker (3 layered)", "60":"Liquorice Lace (1 Layered)", "61":"Liquorice Lace (2 Layered)", "62":"Liquorice Lace (3 Layered)", "63":"Liquorice Lace (4 Layered)", "64":"Liquorice Lace (5 Layered)", "65":"Winter Fizz (1 Layered)", "66":"Winter Fizz (2 Layered)", "67":"Winter Fizz (3 Layered)", "68":"Winter Fizz (4 Layered)", "69":"Summer Fizz (1 Layered)", "70":"Summer Fizz (2 Layered)", "71":"Summer Fizz (3 Layered)", "72":"Summer Fizz (4 Layered)", "73":"Cracked Candy"}
 
 const cannonCodes = [["fallingIcing", "Level"], ["licorice"], ["luckyCandy"], ["mysteryCandy"], ["mulockCandy"], ["pepperCandy", "ExplosionTurns"], ["stripedCandy"], ["stripedRowCandy"], ["stripedColumnCandy"], ["timeCandy"], ["wrappedCandy"], ["colorBomb"], ["fish"], ["shield", "Level"], ["chameleonCandy"]]
 
@@ -1067,19 +1067,7 @@ function importLevel(levelData){
     })
 
     //Set Pre Level Booster
-    try{
-        document.getElementById("disablebooster").checked = levelData.disablePreLevelBoosters || false
-    } 
-    catch{
-        document.getElementById("disablebooster").checked = false
-    }
 
-    try{
-        document.getElementById("enablesugardrops").checked = levelData.enableSugarTrack || true
-    } 
-    catch{
-        document.getElementById("enablesugardrops").checked = true
-    }
 
     //Set score targets
     let scoreTargets = levelData.scoreTargets || []
@@ -1290,8 +1278,7 @@ function exportLevel(){
     level['numberOfColours'] = preferredColors.length
     level['preferredColors'] = preferredColors
 
-    level['disablePreLevelBoosters'] = document.getElementById("disablebooster").checked
-    level['enableSugarTrack'] = document.getElementById("enablesugardrops").checked
+
     level['colorWeightAdjustments'] = [0]
 
     let star1 = Number(document.getElementById("star1").value) || 1000
