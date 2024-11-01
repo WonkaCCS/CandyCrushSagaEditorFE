@@ -24,7 +24,6 @@ const notes = {"006":'blocker_note'}
 const entry_note = {"012":'portal_entry_note'}
 const exit_note = {"013":'portal_exit_note'}
 
-//014 and 015 are unused ids so i'm using them to designate invisible porta;s
 const portalentrance = {'990':'portal_entrance','014':'portal_entrance_hidden'}
 const portalexit = {'991':'portal_exit','015':'portal_exit_hidden'}
 
@@ -210,6 +209,16 @@ function addRequirement(isIngredient = false, ignoreLimit = false){
         option = document.createElement("option")
         option.value = "butter"
         option.innerHTML = "butter"
+        select.appendChild(option)
+
+        option = document.createElement("option")
+        option.value = "liquorice_root"
+        option.innerHTML = "liquorice_root"
+        select.appendChild(option)
+
+        option = document.createElement("option")
+        option.value = "almond"
+        option.innerHTML = "almond"
         select.appendChild(option)
 
     }
@@ -1076,7 +1085,7 @@ function importLevel(levelData){
     document.getElementById("star3").value = scoreTargets[2] || ''
 
 
-    let ingredientOrder = {0: "hazelnut", 1: "cherry", 2: "butter"}
+    let ingredientOrder = {0: "hazelnut", 1: "cherry", 2: "butter", 3: "liquorice_root", 4: "almond"}
     if (wantedMode.includes('Drop down') || wantedMode.includes('Drop Down') || wantedMode.includes('Super Mixed') || wantedMode.includes('Order Drop')){
         (levelData.ingredients || []).forEach(function(quantity, index){
             try{
@@ -1357,13 +1366,19 @@ function exportLevel(){
             else if (item == "butter"){
                 butters = quantity
             }
+            else if (item == "liquorice_root"){
+                liquorice_roots = quantity
+            }
+            else if (item == "almond"){
+                almonds = quantity
+            }
         }
 
         level.numIngredientsOnScreen = 1
         level.maxNumIngredientsOnScreen = parseInt(document.getElementById('maxNumIngredientsOnScreen').value) || 0
         level.ingredientSpawnDensity = parseInt(document.getElementById('ingredientSpawnDensity').value) || 0
 
-        level['ingredients'] = [hazelnuts, cherries, butters]
+        level['ingredients'] = [hazelnuts, cherries, butters, liquorice_roots, almonds]
     }
 
     if (currentMode.includes('Order') || currentMode.includes('Super Mixed')){
