@@ -1336,6 +1336,8 @@ function exportLevel(){
         let hazelnuts = 0
         let cherries = 0
         let butters = 0
+        let liquorice_roots = 0
+        let almonds = 0
 
         let requirementsContainer = document.getElementById("requirements")
         for (var i = 0; i < requirementsContainer.children.length; i++){
