@@ -1376,7 +1376,7 @@ function exportLevel(){
             }
         }
 
-        level.numIngredientsOnScreen = 1
+        level.numIngredientsOnScreen = parseInt(document.getElementById('numIngredientsOnScreen').value) || 0
         level.maxNumIngredientsOnScreen = parseInt(document.getElementById('maxNumIngredientsOnScreen').value) || 0
         level.ingredientSpawnDensity = parseInt(document.getElementById('ingredientSpawnDensity').value) || 0
 
