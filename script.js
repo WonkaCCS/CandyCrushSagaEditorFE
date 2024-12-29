@@ -4,7 +4,7 @@ const candy = {"044": "bomb", "043": "coconut_wheel", "061": "ufo"}
 const sugarCoats = {"134": "sugarcoat_1", "135": "sugarcoat_2", "136": "sugarcoat_3"}
 const locks = {"008": "licorice", "025": "marmalade", "038": "mulock1", "039": "mulock2", "040": "mulock3", "041": "mulock4", "042": "mulock5"}
 const glass = {"122": "glass_tile_1", "123": "glass_tile_2", "124": "glass_tile_3",}
-const blockers = {"007": "block_frosting", "053": "chocolate_frog", "009": "chocolate", "017": "licorice_square", "019": "block_multi_frosting1", "020": "block_multi_frosting2", "021": "block_multi_frosting3", "022": "block_multi_frosting4", "023": "block_multi_frosting5", "024": "chocolate_spawner", "035": "cake_bomb", "054": "shell_1", "062": "magic_mixer", "066": "bobber", "079": "block_waffle1", "080": "block_waffle2", "081": "block_waffle3", "082": "block_waffle4", "083": "block_waffle5", "094": "dark_chocolate_1", "095": "dark_chocolate_2", "096": "dark_chocolate_3", "097": "dark_chocolate_4", "098": "dark_chocolate_5", "129": "chain_layer1_c", "130": "chain_layer2_c", "131": "chain_layer3_c", "132": "chain_layer4_c", "133": "chain_layer5_c", "157": "shell_3", "158": "shell_2", "159": "bubble_pop_1", "160": "bubble_pop_2", "161": "bubble_pop_3", "162": "bubble_pop_4", "163": "bubble_pop_5", "211": "dark_chocolate_spawner_1", "212": "dark_chocolate_spawner_2", "213": "dark_chocolate_spawner_3", "220": "jelly_jar_1", "221": "jelly_jar_2", "037": "toffee_tornado", "070": "pinata", "073": "pinata_crash", "074": "pinata_link1", "075": "pinata_link2", "076": "pinata_link3", "077": "pinata_unbreakable", "078": "pinata_empty", "156": "rainbow_rapid_mold", "099": "crystallized_licorice", "100": "adjecent_bobber", "101": "mystery_blocker", "102": "static_licorice_1", "103": "static_licorice_2", "104": "static_licorice_3", "105": "static_licorice_4", "106": "static_licorice_5", "202": "layered_mystery_1", "203": "layered_mystery_2", "204": "layered_mystery_3", "205": "blue_fizz_1", "206": "blue_fizz_2", "207": "blue_fizz_3", "208": "blue_fizz_4"   , "231": "summer_fizz_1", "232": "summer_fizz_2", "233": "summer_fizz_3", "234": "summer_fizz_4"}
+const blockers = {"007": "block_frosting", "053": "chocolate_frog", "009": "chocolate", "017": "licorice_square", "019": "block_multi_frosting1", "020": "block_multi_frosting2", "021": "block_multi_frosting3", "022": "block_multi_frosting4", "023": "block_multi_frosting5", "024": "chocolate_spawner", "035": "cake_bomb", "054": "shell_1", "062": "magic_mixer", "066": "bobber", "079": "block_waffle1", "080": "block_waffle2", "081": "block_waffle3", "082": "block_waffle4", "083": "block_waffle5", "094": "dark_chocolate_1", "095": "dark_chocolate_2", "096": "dark_chocolate_3", "097": "dark_chocolate_4", "098": "dark_chocolate_5", "129": "chain_layer1_c", "130": "chain_layer2_c", "131": "chain_layer3_c", "132": "chain_layer4_c", "133": "chain_layer5_c", "157": "shell_3", "158": "shell_2", "159": "bubble_pop_1", "160": "bubble_pop_2", "161": "bubble_pop_3", "162": "bubble_pop_4", "163": "bubble_pop_5", "211": "dark_chocolate_spawner_1", "212": "dark_chocolate_spawner_2", "213": "dark_chocolate_spawner_3", "220": "jelly_jar_1", "221": "jelly_jar_2", "037": "toffee_tornado", "070": "pinata", "073": "pinata_crash", "074": "pinata_link1", "075": "pinata_link2", "076": "pinata_link3", "077": "pinata_unbreakable", "078": "pinata_empty", "156": "rainbow_rapid_mold", "099": "crystallized_licorice", "100": "adjecent_bobber", "101": "mystery_blocker", "102": "static_licorice_1", "103": "static_licorice_2", "104": "static_licorice_3", "105": "static_licorice_4", "106": "static_licorice_5", "202": "layered_mystery_1", "203": "layered_mystery_2", "204": "layered_mystery_3", "205": "blue_fizz_1", "206": "blue_fizz_2", "207": "blue_fizz_3", "208": "blue_fizz_4"   , "231": "summer_fizz_1", "232": "summer_fizz_2", "233": "summer_fizz_3", "234": "summer_fizz_4", "236": "block_multi_frosting6", "237": "block_multi_frosting7", "238": "block_multi_frosting8", "239": "block_multi_frosting9"}
 const bonbon = {"182": "bonbon_colorbomb_1", "183": "bonbon_colorbomb_2", "184": "bonbon_colorbomb_3", "185": "bonbon_colorbomb_4", "186": "bonbon_horizontal_1", "187": 'bonbon_horizontal_2', "188": "bonbon_horizontal_3", "189": "bonbon_horizontal_4", "190": "bonbon_vertical_1", "191": "bonbon_vertical_2", "192": "bonbon_vertical_3", "193": "bonbon_vertical_4", "194": "bonbon_fish_1", "195": "bonbon_fish_2", "196": "bonbon_fish_3", "197": "bonbon_fish_4", "198": "bonbon_wrapped_1", "199": "bonbon_wrapped_2", "200": "bonbon_wrapped_3", "201": "bonbon_wrapped_4"}
 const tiles = {"empty": "empty", "000": "none", "001": "grid", "003": "jelly", "004": "jelly2", "064": "blue_tile", "065": "black_tile", "209": "rock1", "210": "rock2"}
 const ingredients = {"048": "cherry", "126": "hazelnut", "920": "butter"}
@@ -40,9 +40,9 @@ var selectedColor = "002"
 var selectedElement = "002"
 var elementLayer = "normal"
 
-const orderItems = {"1": "red", "2": "blue", "3": "yellow", "4": "orange", "5": "purple", "6": "green", "7": "wrapped", "8": "striped", "9": "colorbomb", "10": "striped + striped", "11": "striped + wrapped", "12": "striped + colorbomb", "13": "colorbomb + colorbomb", "14": "wrapped + colorbomb", "15": "wrapped + wrapped", "16": "chocolate", "17": "frosting", "18": "popcorn", "19": "licorice", "20": "pepper bomb", "21": "jellyfish (BROKEN)", "22": "cake bomb", "23": "mystery candy", "24": "magic mixer", "32": "bubblegum"}
+const orderItems = {"1": "red", "2": "blue", "3": "yellow", "4": "orange", "5": "purple", "6": "green", "7": "wrapped", "8": "striped", "9": "colorbomb", "10": "striped + striped", "11": "striped + wrapped", "12": "striped + colorbomb", "13": "colorbomb + colorbomb", "14": "wrapped + colorbomb", "15": "wrapped + wrapped", "16": "chocolate", "17": "frosting", "18": "popcorn", "19": "licorice", "20": "pepper bomb", "21": "jellyfish (BROKEN)", "22": "cake bomb", "23": "mystery candy", "24": "magic mixer", "32": "bubblegum", "40": "liquorice laces", "41": "single layered mystery blocker", "42": "layered mystery blocker", "43": "winter fizz", "44": "summer fizz", "45": "cracked candy"}
 
-const magicMixerItems = {"0": "All Blockers", "1":"pepper bomb", "2": "licorice", "3":"frosting (1 layer)", "4": "frosting (2 layers)", "5": "frosting (3 layers)", "6": "frosting (4 layers)", "7": "frosting (5 layers)", "8": "chocolate", "9": "licorice lock", "10": "marmalade", "30":"bubblegum pop (1 layer)", "31":"bubblegum pop (2 layers)", "32":"bubblegum pop (3 layers)", "33":"bubblegum pop (4 layers)", "34":"bubblegum pop (5 layers)", "55":"popcorn", "56":"single mystery blocker", "57":"mystery blocker (1 layered)", "58":"mystery blocker (2 layered)", "59":"mystery blocker (3 layered)", "60":"Liquorice Lace (1 Layered)", "61":"Liquorice Lace (2 Layered)", "62":"Liquorice Lace (3 Layered)", "63":"Liquorice Lace (4 Layered)", "64":"Liquorice Lace (5 Layered)", "65":"Winter Fizz (1 Layered)", "66":"Winter Fizz (2 Layered)", "67":"Winter Fizz (3 Layered)", "68":"Winter Fizz (4 Layered)", "69":"Summer Fizz (1 Layered)", "70":"Summer Fizz (2 Layered)", "71":"Summer Fizz (3 Layered)", "72":"Summer Fizz (4 Layered)", "73":"Cracked Candy"}
+const magicMixerItems = {"0": "All Blockers", "1":"pepper bomb", "2": "licorice", "3":"frosting (1 layer)", "4": "frosting (2 layers)", "5": "frosting (3 layers)", "6": "frosting (4 layers)", "7": "frosting (5 layers)", "74": "frosting (6 layers)", "75": "frosting (7 layers)", "76": "frosting (8 layers)", "8": "chocolate", "9": "licorice lock", "10": "marmalade", "30":"bubblegum pop (1 layer)", "31":"bubblegum pop (2 layers)", "32":"bubblegum pop (3 layers)", "33":"bubblegum pop (4 layers)", "34":"bubblegum pop (5 layers)", "55":"popcorn",    "60":"Liquorice Lace (1 Layered)", "61":"Liquorice Lace (2 Layered)", "62":"Liquorice Lace (3 Layered)", "63":"Liquorice Lace (4 Layered)", "64":"Liquorice Lace (5 Layered)", "65":"Winter Fizz (1 Layered)", "66":"Winter Fizz (2 Layered)", "67":"Winter Fizz (3 Layered)", "68":"Winter Fizz (4 Layered)", "69":"Summer Fizz (1 Layered)", "70":"Summer Fizz (2 Layered)", "71":"Summer Fizz (3 Layered)", "72":"Summer Fizz (4 Layered)", "73":"Cracked Candy"}
 
 const cannonCodes = [["fallingIcing", "Level"], ["licorice"], ["luckyCandy"], ["mysteryCandy"], ["mulockCandy"], ["pepperCandy", "ExplosionTurns"], ["stripedCandy"], ["stripedRowCandy"], ["stripedColumnCandy"], ["timeCandy"], ["wrappedCandy"], ["colorBomb"], ["fish"], ["shield", "Level"], ["chameleonCandy"]]
 
@@ -180,7 +180,10 @@ function addRequirement(isIngredient = false, ignoreLimit = false){
         typeText = "Ingredient"
         section.setAttribute("reqtype", "ingredient")
     }
-    section.innerHTML = '<button style="left: 85%; border-radius: 0px; background-color: rgb(174, 174, 174); width: 30px; height: 30px" onclick="removeRequirement(this)">X</button> <p class="DroidSans break" style="font-weight: bold; color: white; text-align: center;">Requirement:</p> <img src="ui/hud/red.png" style="max-width: 30px; max-height: 30px;"> <p class="DroidSans" style="margin: 10px; display: block; color: white; text-align: center;">' + typeText + ':</p> <select onchange="switchedRequirement(this)"> </select> <div class="break"></div> <img src="ui/btn_quit.png" style="max-width: 30px; max-height: 30px;"> <p class="DroidSans" style="margin: 10px; display: block; color: white; text-align: center;">Amount:</p> <input style="width: 50px; text-align: center;" placeholder="0" type="number">'
+    section.innerHTML = '<button style="position: 102px; right: 90px; top: 20px; border-radius: 50%; background-color: #00000090; width: 35px; height: 35px; font-size: 1.2em; color: white; border: none; cursor: pointer; padding: 0; display: flex; align-items: center; justify-content: center;" onclick="removeRequirement(this)">✖</button> <p class="BananaSplit break" style="font-weight: bold; color: white; text-align: center;">Requirement:</p> <img src="ui/hud/red.png" style="max-width: 30px; max-height: 30px;"> <p class="BananaSplit" style="margin: 10px; display: block; color: white; text-align: center;">' + typeText + ':</p> <select onchange="switchedRequirement(this)"> </select> <div class="break"></div> <img src="ui/btn_quit.png" style="max-width: 0px; max-height: 0px;"> <p class="BananaSplit" style="margin: 10px; display: block; color: white; text-align: center;">X Amount:</p> <input style="width: 50px; text-align: center;" placeholder="0" type="number">'
+
+    
+
 
     select = section.querySelector("select")
     if (!isIngredient){
@@ -213,7 +216,7 @@ function addRequirement(isIngredient = false, ignoreLimit = false){
 
         option = document.createElement("option")
         option.value = "liquorice_root"
-        option.innerHTML = "liquorice_root"
+        option.innerHTML = "liquorice root"
         select.appendChild(option)
 
         option = document.createElement("option")
@@ -238,7 +241,7 @@ function addMixerOption(){
     section = document.createElement("div")
     section.classList.add("sideoptions")
     section.setAttribute("reqtype", "mixeroption")
-    section.innerHTML = '<button style="left: 85%; border-radius: 0px; background-color: rgb(174, 174, 174); width: 30px; height: 30px" onclick="removeRequirement(this)">X</button> <div class="break"></div> <img src="ui/hud/All Blockers.png" style="max-width: 30px; max-height: 30px;"> <p class="DroidSans" style="margin: 10px; display: block; color: white; text-align: center;">Blocker:</p> <select onchange="switchedMixerOption(this)"> </select> <div class="break"></div>'
+    section.innerHTML = '<button style="position: 102px; right: 90px; top: 20px; border-radius: 50%; background-color: #00000090; width: 35px; height: 35px; font-size: 1.2em; color: white; border: none; cursor: pointer; padding: 0; display: flex; align-items: center; justify-content: center;" onclick="removeRequirement(this)">✖</button><div class="break"></div><img src="ui/hud/All Blockers.png" style="max-width: 30px; max-height: 30px;"><p class="BananaSplit" style="margin: 10px; display: block; color: white; text-align: center;">Blocker:</p><select onchange="switchedMixerOption(this)"></select><div class="break"></div>'
 
     select = section.querySelector("select")
 
@@ -265,7 +268,7 @@ function selectMode(){
 
     document.getElementById("requirements-options-section").style.display = "none"
 
-    if (mode.includes('Drop down') || mode.includes('Drop Down') || mode.includes('Order Drop') || mode.includes('Super Mixed') || mode.includes('Drop Time')) {
+    if (mode.includes('Drop down') || mode.includes('Jelly Drop') || mode.includes('Order Drop') || mode.includes('Super Mix') || mode.includes('Drop Time')) {
         document.getElementById("requirements-options-section").style.display = "block"
         document.getElementById("addingredient").style.display = "block"
     } else {
@@ -278,7 +281,7 @@ function selectMode(){
         })
     }
 
-    if (mode.includes('Order') || mode.includes('Super Mixed')) {
+    if (mode.includes('Order') || mode.includes('Super Mix')) {
         document.getElementById("requirements-options-section").style.display = "block"
         document.getElementById("addorder").style.display = "block"
     } else {
@@ -290,6 +293,9 @@ function selectMode(){
             }
         })
     }
+
+    // Stuff that if I'm not mistaken, is from before Mixed levels were added.
+    
     /*
     if (mode === "Drop down"){
         document.getElementById("requirements-options-section").style.display = "block"
@@ -330,7 +336,8 @@ function selectMode(){
         }
         document.getElementById("addorder").style.display = "none"
     }
-    */
+        */
+    
     currentMode = mode
 }
 
@@ -1048,6 +1055,7 @@ function importLevel(levelData){
     //Set moves & time
     document.getElementById("moves").value = levelData.moveLimit || ""
     document.getElementById("time").value = levelData.timeLimit || ""
+    document.getElementById("frogStomachSize").value = levelData.frogStomachSize || ""
     
 
     //Set preferred colors
@@ -1076,7 +1084,12 @@ function importLevel(levelData){
     })
 
     //Set Pre Level Booster
-
+    try{
+        document.getElementById("enablesugardrops").checked = levelData.enableSugarTrack || true
+    } 
+    catch{
+        document.getElementById("enablesugardrops").checked = true
+    }
 
     //Set score targets
     let scoreTargets = levelData.scoreTargets || []
@@ -1086,7 +1099,7 @@ function importLevel(levelData){
 
 
     let ingredientOrder = {0: "hazelnut", 1: "cherry", 2: "butter", 3: "liquorice_root", 4: "almond"}
-    if (wantedMode.includes('Drop down') || wantedMode.includes('Drop Down') || wantedMode.includes('Super Mixed') || wantedMode.includes('Order Drop')){
+    if (wantedMode.includes('Drop down') || wantedMode.includes('Drop Down') || wantedMode.includes('Super Mix') || wantedMode.includes('Order Drop')){
         (levelData.ingredients || []).forEach(function(quantity, index){
             try{
                 if (quantity == 0){
@@ -1105,7 +1118,7 @@ function importLevel(levelData){
             }catch{}
         })
     }
-    if (wantedMode.includes('Order') || wantedMode.includes('Super Mixed')){
+    if (wantedMode.includes('Order') || wantedMode.includes('Super Mix')){
         (levelData._itemsToOrder || []).forEach(function(itemDict){
             try{
                 let item = itemDict['item']
@@ -1249,7 +1262,7 @@ function exportLevel(){
                         element='084'
                     }
                 }
-
+ 
                 if (element=="991" || element=="015") {
                     //element="011991"
                 }
@@ -1285,6 +1298,7 @@ function exportLevel(){
     })
     level['tileMap'] = levelArray
     level['numberOfColours'] = preferredColors.length
+    level['enableSugarTrack'] = document.getElementById("enablesugardrops").checked
     level['preferredColors'] = preferredColors
 
 
@@ -1325,6 +1339,18 @@ function exportLevel(){
         level['moveLimit'] = moves
         
     }
+    {
+        let frogstomachsize = document.getElementById("frogstomachsize").value
+        if (frogstomachsize === ''){
+            frogstomachsize = 13
+        }
+        else{
+            frogstomachsize = Number(frogstomachsize)
+        }
+
+        level['frogStomachSize'] = frogstomachsize
+        
+    }
     
     
 
@@ -1332,7 +1358,7 @@ function exportLevel(){
 
 
 
-    if (currentMode.includes('Drop down') || currentMode.includes('Drop Down') || currentMode.includes('Super Mixed ') || currentMode.includes('Order Drop')){
+    if (currentMode.includes('Drop down') || currentMode.includes('Drop Down') || currentMode.includes('Super Mix') || currentMode.includes('Order Drop')){
         let hazelnuts = 0
         let cherries = 0
         let butters = 0
@@ -1383,7 +1409,7 @@ function exportLevel(){
         level['ingredients'] = [hazelnuts, cherries, butters, liquorice_roots, almonds]
     }
 
-    if (currentMode.includes('Order') || currentMode.includes('Super Mixed')){
+    if (currentMode.includes('Order') || currentMode.includes('Super Mix')){
         let orders = []
         let requirementsContainer = document.getElementById("requirements")
         for (var i = 0; i < requirementsContainer.children.length; i++){
@@ -1459,6 +1485,8 @@ function exportLevel(){
     }
     return level
 }
+
+
 
 function exportLevelUI(){
     let level = exportLevel()

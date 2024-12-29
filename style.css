@@ -23,7 +23,7 @@ img[src=""] {
 }
 
 :root {
-    --scaleWidth: 1;
+    --scaleWidth: 12;
     --scaleHeight: 1;
 }
 
@@ -69,7 +69,7 @@ td .candy_cannon {
 }
 
 #level {
-    transform: scale(var(--scaleWidth, --scaleHeight));
+    transform: scale(var(--scaleWidth 1, --scaleHeight));
     z-index: 10;
     color: white;
     margin-left: auto;
@@ -80,6 +80,17 @@ td .candy_cannon {
     -ms-user-select: none;
     user-select: none;
 }
+
+/* KEEP THIS IT REMOVES THE SCROLLBARS AND MAKES THE SITE LOOK BETTER */
+* {
+    scrollbar-width: none; 
+    -ms-overflow-style: none; 
+}
+
+*::-webkit-scrollbar {
+    display: none; 
+}
+
 
 .center {
     margin-left: auto;
@@ -100,27 +111,35 @@ td .candy_cannon {
 }
 
 .buttons .dropdown:hover {
-    border-bottom-color: #787878;
-    border-top-color: #2d2d2d;
+    border-bottom-color: #1b1d3f;
+    border-top-color: #5957a8;
 }
 
 .colorselected, .elementselected, .preferredselected {
-    background-color: hsla(0, 0%, 58%, 0.565) !important;
-    border-radius: 0px;
+    background-color: hsla(0, 0%, 100%, 0.565) !important;
+    border-radius: 5px;
 }
+
 
 .buttons .dropdown{
     padding: 0;
     width: 100%;
-    height: 45px;
-    background-color: #545454;
+    height: 40px;
+    background: repeating-linear-gradient(
+        45deg,
+        #404479,
+        #404479 10px,
+        #30335c 10px,
+        #30335c 20px
+      );
     border: 2px solid;
-    color: white;
+    margin: 0;
+    color: #ffffff;
     text-align: left;
     text-decoration: none;
-    display: inline-block;
-    border-top-color: #6c6c6c;
-    border-bottom-color: #383838;
+    display:inline-block;
+    border-top-color: #404479;
+    border-bottom-color: #30335c;
     border-left-color: transparent;
     border-right-color: transparent;
 }
@@ -142,7 +161,69 @@ td .candy_cannon {
 }
 
 .sidetitle{
-    background-color: #383838;
+    background: repeating-linear-gradient(
+        45deg,
+        #404479,
+        #404479 10px,
+        #30335c 10px,
+        #30335c 20px
+      );
+    border: none;
+    height: 45px;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    text-align: left;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.sidetitleorder{
+    background: repeating-linear-gradient(
+        45deg,
+        #404479,
+        #404479 10px,
+        #30335c 10px,
+        #30335c 20px
+      );
+    border: none;
+    height: 56px;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    text-align: left;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.sidetitlecannon{
+    background: repeating-linear-gradient(
+        45deg,
+        #404479,
+        #404479 10px,
+        #30335c 10px,
+        #30335c 20px
+      );
+    border: none;
+    height: 56px;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    text-align: left;
+    text-decoration: none;
+    display: inline-block;
+}
+
+
+
+.sidetitledream{
+    background: repeating-linear-gradient(
+        45deg,
+        #873ee6,
+        #873ee6 10px,
+        #702bb1 10px,
+        #702bb1 20px
+      );
     border: none;
     height: 45px;
     padding: 0;
@@ -161,9 +242,26 @@ td .candy_cannon {
     z-index: 1; 
     bottom: 0; 
     right: 0;
-    background-color: #454545;
-    overflow-x: hidden; 
+    background: repeating-linear-gradient(
+        45deg,
+        #1d203f,
+        #1d203f 10px,
+        #15162e 10px,
+        #15162e 20px
+    );
+    overflow-x: hidden;
+    border-left: 1.5px solid #000000; 
 }
+
+.sideselectionright::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0px; 
+    width: 1.5px; 
+    height: 1320%; 
+    background-color: #30335c; 
+}  
 
 #exportmenu, #importmenu, #creditsmenu {
     position: fixed; 
@@ -199,13 +297,27 @@ img[src="elements/cake_top_right.png"], img[src="elements/cake_bottom_right.png"
     z-index: 1; 
     bottom: 0; 
     left: 0;
-    background-color: #545454;
+    background: repeating-linear-gradient(
+        45deg,
+        #1d203f,
+        #1d203f 10px,
+        #15162e 10px,
+        #15162e 20px
+      );
     overflow-x: hidden; 
   }
 
-.sideoptions {
+  
+
+  .sideoptions {
     text-align:center;
-    background-color: #545454;
+    background: repeating-linear-gradient(
+        45deg,
+        #1d203f,
+        #1d203f 10px,
+        #15162e 10px,
+        #15162e 20px
+      );
     border: none;
     min-height: 45px;
     padding: 10px;
@@ -219,8 +331,35 @@ img[src="elements/cake_top_right.png"], img[src="elements/cake_bottom_right.png"
     align-items: center;
     justify-content: center;
     border: 2px solid;
-    border-top-color: #6b6b6b;
-    border-bottom-color: #383833;
+    border-bottom-color: #30335c;
+    border-left-color: transparent;
+    border-right-color: transparent;
+}
+
+.sideoptionsdream {
+    text-align:center;
+    background: repeating-linear-gradient(
+        45deg,
+        #501885,
+        #501885 10px,
+        #49157a 10px,
+        #49157a 20px
+      );
+    border: none;
+    min-height: 45px;
+    padding: 10px;
+    margin: 0;
+
+    text-align: left;
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid;
+    border-top-color: #40136b;
+    border-bottom-color: #40136b;
     border-left-color: transparent;
     border-right-color: transparent;
 }
@@ -243,7 +382,13 @@ img[src="elements/cake_top_right.png"], img[src="elements/cake_bottom_right.png"
 }
 
 .dropped {
-    background-color: #464646;
+    background: repeating-linear-gradient(
+        45deg,
+        #151632,
+        #151632 10px,
+        #0e0e20 10px,
+        #0e0e20 20px
+      );
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -252,7 +397,10 @@ img[src="elements/cake_top_right.png"], img[src="elements/cake_bottom_right.png"
     padding: 10px;
     padding-left: 5%;
     padding-right:0;
+    border-bottom: 2px solid #30335c;
+    box-shadow: 0 1.5px 0 black; 
 }
+
 
 .dropped button, .preferred{
     background-color: transparent;
@@ -266,12 +414,12 @@ img[src="elements/cake_top_right.png"], img[src="elements/cake_bottom_right.png"
 
 .dropped button:hover, .preferred:hover{
     background-color: hsla(0, 0%, 100%, 0.2);
-    border-radius: 0px;
+    border-radius: 5px;
 }
 
 #level .object {
     position: absolute;
-    max-width:72px;
+    max-width:62px;
     max-height:64px;
     height: auto;
     width: auto;
@@ -282,7 +430,7 @@ img[src="elements/cake_top_right.png"], img[src="elements/cake_bottom_right.png"
     position: absolute;
     top: 50%;
     -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
+    transform: translateY(-54%);
   }
 
 #level .walldown {
@@ -335,7 +483,16 @@ img[src="elements/cake_top_right.png"], img[src="elements/cake_bottom_right.png"
 
 .navbar {
     overflow: hidden;
-    background-color: #333;
+    background: repeating-linear-gradient(
+        45deg,
+        #1d203f,
+        #1d203f 10px,
+        #15162e 10px,
+        #15162e 20px
+      );
+    border-style: solid;
+    border-width: 2px;
+    border-color: #15192c;
     position: fixed;
     top: 0;
     left: 0;
