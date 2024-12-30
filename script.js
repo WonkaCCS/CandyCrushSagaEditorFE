@@ -1342,7 +1342,7 @@ function exportLevel(){
     {
         let frogstomachsize = document.getElementById("frogstomachsize").value
         if (frogstomachsize === ''){
-            frogstomachsize = 13
+            frogstomachsize = 12
         }
         else{
             frogstomachsize = Number(frogstomachsize)
