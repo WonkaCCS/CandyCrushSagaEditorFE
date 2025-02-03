@@ -116,7 +116,7 @@ td .candy_cannon {
 }
 
 .colorselected, .elementselected, .preferredselected {
-    background-color: hsla(0, 0%, 100%, 0.565) !important;
+    background-color: hsla(0, 0%, 0%, 0.565) !important;
     border-radius: 5px;
 }
 

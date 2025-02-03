@@ -124,6 +124,47 @@
                     <!--  <label class='DroidSans' style="color: white; text-align: center;"><s>Drop Time</s></label> -->
                     <input type="radio" id="supermixedoption" name="leveltype" value="Super Mix">
                 </label>
+
+                <label class="leveltypelabel" for="jellycolor" style="margin: 5px;" onclick="selectMode()">
+                    <img src="ui/playmode_icon_jelly_color.png" style="max-width: 30px; max-height: 30px;">
+                    
+                    <!--  <label class='DroidSans' style="color: white; text-align: center;"><s>Drop Time</s></label> -->
+                    <input type="radio" id="jellycolor" name="leveltype" value="Jelly Color">
+                </label>
+
+
+                <label class="leveltypelabel" for="regularjellycolor" style="margin: 5px;" onclick="selectMode()">
+                    <img src="ui/playmode_icon_jellycolorregular.png" style="max-width: 30px; max-height: 30px;">
+                    
+                    <!--  <label class='DroidSans' style="color: white; text-align: center;"><s>Drop Time</s></label> -->
+                    <input type="radio" id="regularjellycolor" name="leveltype" value="Multi Jelly">
+                </label>
+
+
+                <label class="leveltypelabel" for="jellycolordrop" style="margin: 5px;" onclick="selectMode()">
+                    <img src="ui/playmode_icon_jellycolordrop.png" style="max-width: 30px; max-height: 30px;">
+                    
+                    <!--  <label class='DroidSans' style="color: white; text-align: center;"><s>Drop Time</s></label> -->
+                    <input type="radio" id="jellycolordrop" name="leveltype" value="Jelly Color Drop">
+                </label>
+
+
+                <label class="leveltypelabel" for="jellycolororder" style="margin: 5px;" onclick="selectMode()">
+                    <img src="ui/playmode_icon_jellycolororder.png" style="max-width: 30px; max-height: 30px;">
+                    
+                    <!--  <label class='DroidSans' style="color: white; text-align: center;"><s>Drop Time</s></label> -->
+                    <input type="radio" id="jellycolororder" name="leveltype" value="Jelly Color Order">
+                </label>
+
+                <label class="leveltypelabel" for="jellycolortime" style="margin: 5px;" onclick="selectMode()">
+                    <img src="ui/playmode_icon_jellycolortime.png" style="max-width: 30px; max-height: 30px;">
+                    
+                    <!--  <label class='DroidSans' style="color: white; text-align: center;"><s>Drop Time</s></label> -->
+                    <input type="radio" id="jellycolortime" name="leveltype" value="Jelly Color Time">
+                </label>
+
+
+
                     
 
 
@@ -255,6 +296,10 @@
                         <tr class="cannonpref" elm="pepperCandy" image="elements/cannon_bomb.png" tick="ExplosionTurns"></tr>
                         <tr class="cannonpref" elm="timeCandy" image="elements/cannon_time_candy.png" tick=""></tr>
                         <tr class="cannonpref" elm="chameleonCandy" image="elements/chameleon.png" tick=""></tr>
+                        <tr class="cannonpref" elm="wrappedCandy" image="elements/cannon_wrapped_candy.png" tick=""></tr>
+                        <tr class="cannonpref" elm="stripedCandy" image="elements/cannon_striped_candy.png" tick=""></tr>
+                        <tr class="cannonpref" elm="extraMoves" image="elements/cannon_extra_moves_candy.png" tick=""></tr>
+                        
                         <tr>
                             <td> 
                                 <img class="elmimg" style="max-width: 70%;" src="elements/cannon_ingredient.png"> 
@@ -336,6 +381,7 @@
                         <div class="selectelement" element="coconut_wheel", gamelayer="normal"></div>
                         <div class="selectelement" element="ufo", gamelayer="normal"></div>
                         <div class="selectcoloredelement" element="cracked_candy"></div>
+                        <div class="selectcoloredelement" element="extra_moves_candy"></div>
                     </div>
 
                     <button class="dropdown" onclick="toggleDropdown(this)" associd="frogss">
@@ -367,6 +413,8 @@
                         <div class="selectelement" element="grid" gamelayer="tile"></div>
                         <div class="selectelement" element="jelly" gamelayer="tile"></div>
                         <div class="selectelement" element="jelly2" gamelayer="tile"></div>
+                        <div class="selectelement" element="blue_tile" gamelayer="tile"></div>
+                        <div class="selectelement" element="black_tile" gamelayer="tile"></div>
                     </div>
 
                     <button class="dropdown" onclick="toggleDropdown(this)" associd="blockers">
@@ -447,9 +495,9 @@
                           </div>
                     </button>
                     <div class="dropped" id="notes" style="display:none">
-                        <div class="selectelement" element="blocker_note" gamelayer="notes"></div>
                         <div class="selectelement" element="portal_entry_note" gamelayer="entry_note"></div>
                         <div class="selectelement" element="portal_exit_note" gamelayer="exit_note"></div>
+                        <div class="selectelement" element="blocker_note" gamelayer="notes"></div>
                     </div>
     
                     
@@ -498,6 +546,10 @@
                         <div class="selectelement" element="cannon_mystery" gamelayer="candy_cannon"></div>
                         <div class="selectelement" element="cannon_chameleon" gamelayer="candy_cannon"></div>
                         <div class="selectelement" element="cannon_extra_time_and_moves" gamelayer="candy_cannon"></div>
+                        <div class="selectelement" element="cannon_striped_candy" gamelayer="candy_cannon"></div>
+                        <div class="selectelement" element="cannon_wrapped_candy" gamelayer="candy_cannon"></div>
+                        <div class="selectelement" element="cannon_extra_moves_candy" gamelayer="candy_cannon"></div>
+
                     </div>
 
                     <button class="dropdown" onclick="toggleDropdown(this)" associd="ingredients">
@@ -580,7 +632,7 @@
             <div class="popup" style="height: 90%; width: 40%; left: 30%; position: fixed; top: 50%; transform: translateY(-50%); background: repeating-linear-gradient(45deg, #404479, #404479 10px, #30335c 10px, #30335c 20px); padding: 20px; border-radius: 10px; box-shadow: 0 20px 10px rgba(0, 0, 0, 0.5);">
                 <button onclick="document.getElementById('creditsmenu').style.display = 'none'" style="position: absolute; right: 20px; top: 20px; border-radius: 50%; background-color: #00000090; width: 35px; height: 35px; font-size: 1.2em; color: white; border: none; cursor: pointer; padding: 0; display: flex; align-items: center; justify-content: center;">✖</button>
                 <p class='BananaSplit' style="margin: 0; width: 80%; height: 20px; border-radius: 0px; background-color: padding: 10px; display: block; color: white; text-align: center; font-size: 1.5em;">Candy Crush Level Editor Credits:</p>
-                <p class="BananaSplit" style="color: lightcoral; width: fit-content; height: fit-content; text-align: center; font-size: 1.2em;">All right go to King Limited. <br>This editor is running: Version 1.8 Build 7100 ReFlashed</p>
+                <p class="BananaSplit" style="color: lightcoral; width: fit-content; height: fit-content; text-align: center; font-size: 1.2em;">All right go to King Limited. <br>This editor is running: Version 1.9 Flash Extended</p>
                 <p class="BananaSplit" style="color:honeydew; width: 80%; text-align: center; vertical-align: middle; border-radius: 0px; display: inline-block; font-size: 1.1em;">
                 <br>This editor was made by Blaki and then edited by Fence, Ender_Pearl, fuffy7057 Xenon. You may feel free to fork it and do what you like with it as long as you credit Blaki and King.<br><br>To use blockers, use the pink sticky note at the end of the blockers section for every static blocker. This does not include Licorice Swirls and Locks. <br><br>To use Candy Cannons you need to know that the Maximum means the maximum amount of items there can be on the board. The Interval means that if you reached the maximum, and let's say the interval is two, the game will spawn another single unit of that item after two moves.<br>To use teleporters, place a pink teleporter note on the exit teleporter and a blue one on the entry teleporter.<br>ㅤ
                 </p>
