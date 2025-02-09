@@ -34,7 +34,7 @@
                     <div class="navbarflex">
                         
                         <button style="border-radius: 10px; background: #00000000; width: 30%; font-size: 1em; margin-left: -99px; color: white; border: 2px solid #00000000; text-align: center; padding: 10px;" onclick="window.open('https://wonkaccs.github.io/CandyCrushSagaFE/?levelCode=' + JSON.stringify(exportLevel()), '_blank')">▶ Play Level</button>
-                        <button style="border-radius: 10px; background: #00000000; width: 30%; font-size: 1em; margin-top: 0px; color: white; border: 2px solid #00000000; text-align: center; padding: 10px;" onclick="window.open('https://wonkaccs.github.io/CandyCrushSagaFEVanilla/?levelCode=' + JSON.stringify(exportLevel()), '_blank')">▶ Play in Vanilla</button>
+                        <button style="border-radius: 10px; background: #00000000; width: 30%; font-size: 1em; margin-top: 0px; color: white; border: 2px solid #00000000; text-align: center; padding: 10px;" onclick="window.open('https://wonkaccs.github.io/CandyCrushSagaFEUnstable/?levelCode=' + JSON.stringify(exportLevel()), '_blank')">▶ Beta</button>
                         
                         <button style="border-radius: 10px; background: #00000000; width: 30%; font-size: 1em; margin-top: 0px; color: white; border: 2px solid #00000000; text-align: center; padding: 10px;" onclick="exportLevelUI()">⏏ Export Level</button>
                         <button style="border-radius: 10px; background: #00000000; width: 30%; font-size: 1em; margin-left: 0px; color: white; border: 2px solid #00000000; text-align: center; padding: 10px;" onclick="displayImportLevelUI()"><small>⤵</small> Import Level</button>
@@ -101,19 +101,24 @@
                         <!-- <label class='DroidSans' style="color: white; text-align: center;"><s>Jelly Time</s></label> -->
                         <input type="radio" id="jellytimeoption" name="leveltype" value="Jelly Time">
                     </label>
-
+<!-- 
                     <label class="leveltypelabel" for="ordertimeoption" style="margin: 5px;" onclick="selectMode()">
                         <img src="ui/playmode_icon_ordertime.png" style="max-width: 30px; max-height: 30px;">
-                        
-                        <!-- <label class='DroidSans' style="color: white; text-align: center;"><s>Order Time</s></label> -->
+                   
                         <input type="radio" id="ordertimeoption" name="leveltype" value="Order Time">
                     </label>
 
                     <label class="leveltypelabel" for="droptimeoption" style="margin: 5px;" onclick="selectMode()">
                         <img src="ui/playmode_icon_droptime.png" style="max-width: 30px; max-height: 30px;">
-                        
-                        <!-- <label class='DroidSans' style="color: white; text-align: center;"><s>Drop Time</s></label> -->
+                      
                         <input type="radio" id="droptimeoption" name="leveltype" value="Drop Time">
+                    </label>
+-->
+                    <label class="leveltypelabel" for="jellycolortime" style="margin: 5px;" onclick="selectMode()">
+                        <img src="ui/playmode_icon_jellycolortime.png" style="max-width: 30px; max-height: 30px;">
+                        
+                        <!--  <label class='DroidSans' style="color: white; text-align: center;"><s>Drop Time</s></label> -->
+                        <input type="radio" id="jellycolortime" name="leveltype" value="Jelly Color Time">
                     </label>
 
                 </label>
@@ -156,12 +161,7 @@
                     <input type="radio" id="jellycolororder" name="leveltype" value="Jelly Color Order">
                 </label>
 
-                <label class="leveltypelabel" for="jellycolortime" style="margin: 5px;" onclick="selectMode()">
-                    <img src="ui/playmode_icon_jellycolortime.png" style="max-width: 30px; max-height: 30px;">
-                    
-                    <!--  <label class='DroidSans' style="color: white; text-align: center;"><s>Drop Time</s></label> -->
-                    <input type="radio" id="jellycolortime" name="leveltype" value="Jelly Color Time">
-                </label>
+                
 
 
 
@@ -203,7 +203,7 @@
                     <button value="4" class="preferred preferredselected" onclick="togglePreferred(this)">
                         <img class="selectionimage" src="elements/red.png">
                     </button>
-                    <button value="5" class="preferred" onclick="togglePreferred(this)">
+                    <button value="5" class="preferred " onclick="togglePreferred(this)">
                         <img class="selectionimage" src="elements/yellow.png">
                     </button>
                 </div>
@@ -299,6 +299,17 @@
                         <tr class="cannonpref" elm="wrappedCandy" image="elements/cannon_wrapped_candy.png" tick=""></tr>
                         <tr class="cannonpref" elm="stripedCandy" image="elements/cannon_striped_candy.png" tick=""></tr>
                         <tr class="cannonpref" elm="extraMoves" image="elements/cannon_extra_moves_candy.png" tick=""></tr>
+                        <tr class="cannonpref" elm="stripedRowCandy" image="elements/cannon_striped_horizontal.png" tick=""></tr>
+                        <tr class="cannonpref" elm="stripedColumnCandy" image="elements/cannon_striped_vertical.png" tick=""></tr>
+                        <tr class="cannonpref" elm="colorBomb" image="elements/cannon_colorbomb.png" tick=""></tr>
+                        <tr class="cannonpref" elm="fish" image="elements/cannon_fish.png" tick=""></tr>
+                        <tr class="cannonpref" elm="crackedCandy" image="elements/cannon_cracked_candy.png" tick=""></tr>
+
+                        <tr class="cannonpref" elm="cocoWheel" image="elements/cannon_wheel.png" tick=""></tr>
+
+                        <tr class="cannonpref" elm="ufoCandy" image="elements/cannon_ufo.png" tick=""></tr>
+
+                        <tr class="cannonpref" elm="sugarDrop" image="elements/cannon_sugar_drops.png" tick=""></tr>
                         
                         <tr>
                             <td> 
@@ -450,6 +461,20 @@
                         <div class="selectelement" element="layered_mystery_2" gamelayer="normal"></div>
                         <div class="selectelement" element="layered_mystery_3" gamelayer="normal"></div>
 
+                        <div class="selectelement" element="bear1" gamelayer="normal"></div>
+                        <div class="selectelement" element="bear2" gamelayer="normal"></div>
+                        <div class="selectelement" element="bear3" gamelayer="normal"></div>
+                        <div class="selectelement" element="bear4" gamelayer="normal"></div>
+                        <div class="selectelement" element="bear5" gamelayer="normal"></div>
+                        <div class="selectelement" element="bear6" gamelayer="normal"></div>
+
+                        <div class="selectelement" element="empty_honey_1" gamelayer="normal"></div>
+                        <div class="selectelement" element="empty_honey_2" gamelayer="normal"></div>
+                        <div class="selectelement" element="empty_honey_3" gamelayer="normal"></div>
+                        <div class="selectelement" element="empty_honey_4" gamelayer="normal"></div>
+                        <div class="selectelement" element="empty_honey_5" gamelayer="normal"></div>
+                        <div class="selectelement" element="empty_honey_6" gamelayer="normal"></div>
+
                     </div>
 
                     <button class="dropdown" onclick="toggleDropdown(this)" associd="fizz">
@@ -473,20 +498,7 @@
                         <div class="selectelement" element="summer_fizz_3" gamelayer="normal"></div>
                         <div class="selectelement" element="summer_fizz_4" gamelayer="normal"></div>
                     </div>
-                    <button class="dropdown" onclick="toggleDropdown(this)" associd="indicator">
-                        <div style="display: flex; justify-content: space-between;">
-                            <p class='BananaSplit' style="padding-left: 5%; ">Direction Indicators</p>
-                            <p class="arrow" style="display: inline; padding-right: 5%; transform: rotate(90deg);">&raquo</p>
-                          </div>
-                    </button>
-                    <div class="dropped" id="indicator" style="display:none">
-                        <div class="selectelement" element="up_indicator" gamelayer="Indicators"></div>
-                        <div class="selectelement" element="down_indicator" gamelayer="Indicators"></div>
-                        <div class="selectelement" element="right_indicator" gamelayer="Indicators"></div>
-                        <div class="selectelement" element="left_indicator" gamelayer="Indicators"></div>
-                        <div class="selectelement" element="horizontal_indicator" gamelayer="Indicators"></div>
-                        <div class="selectelement" element="vertical_indicator" gamelayer="Indicators"></div>
-                    </div>
+                    
 
                     <button class="dropdown" onclick="toggleDropdown(this)" associd="notes">
                         <div style="display: flex; justify-content: space-between;">
@@ -511,12 +523,14 @@
                     </button>
                     <div class="dropped" id="locks" style="display:none">
                         <div class="selectelement" element="licorice" gamelayer="lock"></div>
+                        
                         <div class="selectelement" element="marmalade" gamelayer="lock"></div>
                         <div class="selectelement" element="mulock1" gamelayer="lock"></div>
                         <div class="selectelement" element="mulock2" gamelayer="lock"></div>
                         <div class="selectelement" element="mulock3" gamelayer="lock"></div>
                         <div class="selectelement" element="mulock4" gamelayer="lock"></div>
                         <div class="selectelement" element="mulock5" gamelayer="lock"></div>
+
                     </div>
 
 
@@ -549,6 +563,16 @@
                         <div class="selectelement" element="cannon_striped_candy" gamelayer="candy_cannon"></div>
                         <div class="selectelement" element="cannon_wrapped_candy" gamelayer="candy_cannon"></div>
                         <div class="selectelement" element="cannon_extra_moves_candy" gamelayer="candy_cannon"></div>
+                        <div class="selectelement" element="cannon_striped_vertical" gamelayer="candy_cannon"></div>
+                        <div class="selectelement" element="cannon_striped_horizontal" gamelayer="candy_cannon"></div>
+                        <div class="selectelement" element="cannon_colorbomb" gamelayer="candy_cannon"></div>
+                        
+                        <div class="selectelement" element="cannon_fish" gamelayer="candy_cannon"></div>
+                        <div class="selectelement" element="cannon_cracked_candy" gamelayer="candy_cannon"></div>   
+                        <div class="selectelement" element="cannon_wheel" gamelayer="candy_cannon"></div>
+                        <div class="selectelement" element="cannon_ufo" gamelayer="candy_cannon"></div>
+                        <div class="selectelement" element="cannon_sugar_drops" gamelayer="candy_cannon"></div>
+                        
 
                     </div>
 
