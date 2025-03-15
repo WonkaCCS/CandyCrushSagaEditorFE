@@ -33,9 +33,10 @@
                     </div>
                     <div class="navbarflex">
                         
-                        <button style="border-radius: 10px; background: #00000000; width: 30%; font-size: 1em; margin-left: -99px; color: white; border: 2px solid #00000000; text-align: center; padding: 10px;" onclick="window.open('https://wonkaccs.github.io/CandyCrushSagaFE/?levelCode=' + JSON.stringify(exportLevel()), '_blank')">▶ Play Level</button>
-                        <button style="border-radius: 10px; background: #00000000; width: 30%; font-size: 1em; margin-top: 0px; color: white; border: 2px solid #00000000; text-align: center; padding: 10px;" onclick="window.open('https://wonkaccs.github.io/CandyCrushSagaFEVanilla/?levelCode=' + JSON.stringify(exportLevel()), '_blank')">▶ Play in Vanilla</button>
-                        
+                        <button style="border-radius: 10px; background: #00000000; width: 30%; font-size: 1em; margin-left: -99px; color: white; border: 2px solid #00000000; text-align: center; padding: 10px;" onclick="window.open('http://localhost/CCSFE/?levelCode=' + JSON.stringify(exportLevel()), '_blank')">▶ Play</button>
+                        <button style="border-radius: 10px; background: #00000000; width: 30%; font-size: 1em; margin-top: 0px; color: white; border: 2px solid #00000000; text-align: center; padding: 10px;" onclick="window.open('http://localhost/April Fools/?levelCode=' + JSON.stringify(exportLevel()), '_blank')">▶ April Fools</button>
+                        <button style="border-radius: 10px; background: #00000000; width: 30%; font-size: 1em; margin-top: 0px; color: white; border: 2px solid #00000000; text-align: center; padding: 10px;" onclick="window.open('https://wonkaccs.github.io/CandyCrushSagaFEUnstable/?levelCode=' + JSON.stringify(exportLevel()), '_blank')">▶ Beta</button>
+                        <button style="border-radius: 10px; background: #00000000; width: 30%; font-size: 1em; margin-top: 0px; color: white; border: 2px solid #00000000; text-align: center; padding: 10px;" onclick="window.open('http://localhost/CCSFE/Backup/?levelCode=' + JSON.stringify(exportLevel()), '_blank')">▶ Backup</button>
                         <button style="border-radius: 10px; background: #00000000; width: 30%; font-size: 1em; margin-top: 0px; color: white; border: 2px solid #00000000; text-align: center; padding: 10px;" onclick="exportLevelUI()">⏏ Export Level</button>
                         <button style="border-radius: 10px; background: #00000000; width: 30%; font-size: 1em; margin-left: 0px; color: white; border: 2px solid #00000000; text-align: center; padding: 10px;" onclick="displayImportLevelUI()"><small>⤵</small> Import Level</button>
                     </div>
@@ -424,6 +425,8 @@
                         <div class="selectelement" element="grid" gamelayer="tile"></div>
                         <div class="selectelement" element="jelly" gamelayer="tile"></div>
                         <div class="selectelement" element="jelly2" gamelayer="tile"></div>
+                        <div class="selectelement" element="jelly3" gamelayer="tile"></div>
+                        <div class="selectelement" element="jelly4" gamelayer="tile"></div>
                         <div class="selectelement" element="blue_tile" gamelayer="tile"></div>
                         <div class="selectelement" element="black_tile" gamelayer="tile"></div>
                     </div>
@@ -474,7 +477,7 @@
                         <div class="selectelement" element="empty_honey_4" gamelayer="normal"></div>
                         <div class="selectelement" element="empty_honey_5" gamelayer="normal"></div>
                         <div class="selectelement" element="empty_honey_6" gamelayer="normal"></div>
-
+                        <div class="selectelement" element="gumball_machine" gamelayer="normal"></div>
                     </div>
 
                     <button class="dropdown" onclick="toggleDropdown(this)" associd="fizz">
@@ -510,6 +513,7 @@
                         <div class="selectelement" element="portal_entry_note" gamelayer="entry_note"></div>
                         <div class="selectelement" element="portal_exit_note" gamelayer="exit_note"></div>
                         <div class="selectelement" element="blocker_note" gamelayer="notes"></div>
+                        
                     </div>
     
                     
@@ -530,7 +534,7 @@
                         <div class="selectelement" element="mulock3" gamelayer="lock"></div>
                         <div class="selectelement" element="mulock4" gamelayer="lock"></div>
                         <div class="selectelement" element="mulock5" gamelayer="lock"></div>
-
+                        <div class="selectelement" element="vent_cotton" gamelayer="lock"></div>
                     </div>
 
 
