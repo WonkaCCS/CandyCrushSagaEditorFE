@@ -14,7 +14,7 @@ const wallright = {"089": "wall_right", "167": "licorice_wall_right", "112": "de
 const wallleft = {"088": "wall_left", "166": "licorice_wall_left", "111": "destructible_wall_1_left", "115": "destructible_wall_2_left", "119": "destructible_wall_3_left", "170": "destructible_wall_lic_1_left", "174": "destructible_wall_lic_2_left", "178": "destructible_wall_lic_3_left"}
 const rainbowcannontop = {"152":"rainbow_rapid_cannon_top"}
 const rainbowcannonbottom = {"153":"rainbow_rapid_cannon_bottom"}
-const rainbowcannonleft = {"154":"rainbow_rapid_cannon_left"}   
+const rainbowcannonleft = {"154":"rainbow_rapid_cannon_left"}
 const rainbowcannonright = {"155":"rainbow_rapid_cannon_right"}
 const cannons = {"027": "cannon_ingredient", "028": "cannon_licorice", "029": "cannon_bomb", "030": "cannon_mulock_key", "031": "cannon_mystery", "067": "cannon_chameleon", "068": "cannon_lucky", "069": "cannon_extra_time_and_moves", "071": "cannon_striped_candy", "072": "cannon_wrapped_candy", "085": "cannon_extra_moves_candy", "107": "cannon_striped_horizontal", "108": "cannon_striped_vertical", "239": "cannon_cracked_candy", "127": "cannon_colorbomb", "128": "cannon_fish", "240": "cannon_wheel", "241": "cannon_ufo", "242": "cannon_sugar_drops"}
 const path = {"140": "rainbow_stream_vertical", "141": "rainbow_stream_horizontal", "142": "rainbow_stream_BL", "143": "rainbow_stream_BR", "144": "rainbow_stream_TL", "145": "rainbow_stream_TR", "146": "rainbow_stream_TBL", "147": "rainbow_stream_TBR", "148": "rainbow_stream_TLR", "149": "rainbow_stream_BLR", "150": "rainbow_stream_all_directions", "151": "rainbow_stream_intersection_point"}
@@ -106,7 +106,7 @@ const layerElements = {
     "candy_cannon": ["005"].concat(Object.keys(cannons)),
     "portal_entrance":[].concat(Object.keys(portalentrance)),
     "portal_exit":[].concat(Object.keys(portalexit))
-    
+
 }
 
 var preferredColors = [0,1,2,3,4]
@@ -171,7 +171,7 @@ function addRequirement(isIngredient = false, ignoreLimit = false){
             document.getElementById("requirementwarning").style.display = "none"
         }
     }
-    
+
     section = document.createElement("div")
     section.classList.add("sideoptions")
     let typeText = "Order"
@@ -182,7 +182,7 @@ function addRequirement(isIngredient = false, ignoreLimit = false){
     }
     section.innerHTML = '<button style="position: 102px; right: 90px; top: 20px; border-radius: 50%; background-color: #00000090; width: 35px; height: 35px; font-size: 1.2em; color: white; border: none; cursor: pointer; padding: 0; display: flex; align-items: center; justify-content: center;" onclick="removeRequirement(this)">✖</button> <p class="BananaSplit break" style="font-weight: bold; color: white; text-align: center;">Requirement:</p> <img src="ui/hud/red.png" style="max-width: 30px; max-height: 30px;"> <p class="BananaSplit" style="margin: 10px; display: block; color: white; text-align: center;">' + typeText + ':</p> <select onchange="switchedRequirement(this)"> </select> <div class="break"></div> <img src="ui/btn_quit.png" style="max-width: 0px; max-height: 0px;"> <p class="BananaSplit" style="margin: 10px; display: block; color: white; text-align: center;">X Amount:</p> <input style="width: 50px; text-align: center;" placeholder="0" type="number">'
 
-    
+
 
 
     select = section.querySelector("select")
@@ -237,7 +237,7 @@ function switchedMixerOption(object){
 
 function addMixerOption(){
     let requirementsObj = document.getElementById("mixeroptions")
-    
+
     section = document.createElement("div")
     section.classList.add("sideoptions")
     section.setAttribute("reqtype", "mixeroption")
@@ -251,7 +251,7 @@ function addMixerOption(){
         option.innerHTML = magicMixerItems[key]
         select.appendChild(option)
     })
-    
+
     requirementsObj.prepend(section)
 }
 
@@ -295,7 +295,7 @@ function selectMode(){
     }
 
     // Stuff that if I'm not mistaken, is from before Mixed levels were added.
-    
+
     /*
     if (mode === "Drop down"){
         document.getElementById("requirements-options-section").style.display = "block"
@@ -337,7 +337,7 @@ function selectMode(){
         document.getElementById("addorder").style.display = "none"
     }
         */
-    
+
     currentMode = mode
 }
 
@@ -361,7 +361,7 @@ function togglePreferred(object){
 function toggleDropdown(object){
     let dropped = document.getElementById(object.getAttribute("associd"))
     let p = object.querySelector(".arrow")
-    
+
     if (dropped.style.display == "none"){
         dropped.style.display = "block"
         p.style.transform = "rotate(" + 0 + "deg)"
@@ -565,7 +565,7 @@ function updateTile(object){
 
 
 
-        
+
         object.setAttribute("tile", selectedElement)
         image.src = elementsFolder + elements_ids[selectedElement] + ".png"
 
@@ -607,11 +607,11 @@ function updateTile(object){
     }
     else if (selectedElement == "035"){
         let level = document.getElementById("level")
-	
+
         if (row >= 8 || column >= 8){
             return
         }
-	
+
         //Set this tile as cakebomb
         let isCake = object.getAttribute("cake")
         if (isCake !== undefined && isCake !== ""){
@@ -629,12 +629,12 @@ function updateTile(object){
             try{
                 let otherObject = level.children[info[0]].children[info[1]]
                 let otherImage = otherObject.querySelector("img.normal")
-		
+
                 isCake = otherObject.getAttribute("cake")
                 if (isCake !== undefined && isCake !== ""){
                     removeCake(otherObject)
                 }
-    		
+
                 otherImage.src = elementsFolder + info[2] + ".png"
                 otherImage.setAttribute("class", "normal default stretch")
                 otherObject.setAttribute("normal", selectedElement)
@@ -666,7 +666,7 @@ function updateTile(object){
         let colorName = elements_ids[selectedColor]
         let elementName = ""
         let name = ""
-    
+
         if (selectedColor === "002" && selectedElement === "002"){
             name = "random"
         }
@@ -677,7 +677,7 @@ function updateTile(object){
             elementName = elements_ids[selectedElement] + "_"
             name = elementName + colorName
         }
-        
+
         object.setAttribute(elementLayer, selectedElement)
         object.classList.add("frog")
         image.src = elementsFolder + name + ".png"
@@ -687,7 +687,7 @@ function updateTile(object){
             let prevElm = document.querySelector(".frog")
             console.log(prevElm)
             prevElm.classList.remove("frog")
-    
+
             if (prevElm.getAttribute("normal") === "036" || prevElm.getAttribute("normal") === "053"){
                 prevElm.setAttribute("normal", "002")
                 prevElm.setAttribute("color", selectedColor)
@@ -709,7 +709,7 @@ function updateTile(object){
 
                 cannonElements.push("005")
             }
-    
+
             cannonElements.push(selectedElement)
 
             object.setAttribute("candy_cannon", JSON.stringify(cannonElements))
@@ -721,7 +721,7 @@ function updateTile(object){
                     element.remove()
                 }
             })
-    
+
             ammoimage = ammocontainer.appendChild(document.createElement("img"))
 
             ammoimage.setAttribute("element", selectedElement)
@@ -768,7 +768,7 @@ function updateTile(object){
             let colorName = elements_ids[selectedColor]
             let elementName = ""
             let name = ""
-        
+
             if (selectedColor === "002" && selectedElement === "002"){
                 name = "random"
             }
@@ -779,7 +779,7 @@ function updateTile(object){
                 elementName = elements_ids[selectedElement] + "_"
                 name = elementName + colorName
             }
-            
+
             image.src = elementsFolder + name + ".png"
             object.setAttribute("normal", selectedElement)
             object.setAttribute("color", selectedColor)
@@ -822,7 +822,7 @@ function updateTile(object){
             image.classList.remove("small")
         } catch{}
     }
-    
+
     if (stretched.includes(selectedElement)){
         if (!image.classList.contains("stretched")){
             image.classList.add("stretched")
@@ -889,7 +889,7 @@ function updateElmState(object){
         let colorName = elements_ids[colorId]
         let elementName = ""
         let name = ""
-    
+
         if (colorId === "002" && objectId === "002"){
             name = "random"
         }
@@ -929,7 +929,7 @@ function importLevel(levelData){
         childrenRows.forEach(function(row, rIndex){
             let objects = [].slice.call(row.children)
             let color = "002"
-    
+
             objects.forEach(function(object, cIndex){
                 //Split object into array of parts of 3
                 try{
@@ -946,7 +946,7 @@ function importLevel(levelData){
                         textObject.splice(index, 1)
                     }
                 })
-    
+
                 textObject.forEach(function(objectId){
                     if (objectId.length !== 3){
                         throw "An object ID is not 3 characters long."
@@ -980,13 +980,13 @@ function importLevel(levelData){
                         }
                     }
 
-                    
-    
+
+
                     let layer = getLayerFromId(objectId)
                     selectedColor = color
                     elementLayer = layer
                     selectedElement = objectId
-                    
+
                     try{
                         updateTile(object)
                     }
@@ -1006,7 +1006,7 @@ function importLevel(levelData){
                 } else {
                     selectedElement = '014'
                 }
-                
+
                 try {
                     updateTile([].slice.call(childrenRows[portal[0][1]].children)[portal[0][0]])
                     isPortalTimeout=false
@@ -1023,7 +1023,7 @@ function importLevel(levelData){
                 } else {
                     selectedElement = '015'
                 }
-                
+
                 try {
                     updateTile([].slice.call(childrenRows[portal[1][1]].children)[portal[1][0]])
                     isPortalTimeout=false
@@ -1048,7 +1048,7 @@ function importLevel(levelData){
         originalLevel.style.display = "block"
         throw(err)
     }
-    
+
     //Set game mode
     let wantedMode = levelData['gameModeName']
     let wantedModeInput = document.getElementById("modeselection").querySelector('input[value="' + String(wantedMode) + '"]')
@@ -1059,8 +1059,8 @@ function importLevel(levelData){
     //Set moves & time
     document.getElementById("moves").value = levelData.moveLimit || ""
     document.getElementById("time").value = levelData.timeLimit || ""
-    document.getElementById("frogStomachSize").value = levelData.frogStomachSize || ""
-    
+    document.getElementById("frogstomachsize").value = levelData.frogStomachSize || ""
+
 
     //Set preferred colors
     let colorspref = document.getElementById("colorspref-section")
@@ -1078,8 +1078,8 @@ function importLevel(levelData){
             }
         }
     }
-    
-    
+
+
     //Add requirements
     let requirementsContainer = document.getElementById("requirements")
 
@@ -1090,7 +1090,7 @@ function importLevel(levelData){
     //Set Pre Level Booster
     try{
         document.getElementById("enablesugardrops").checked = levelData.enableSugarTrack || true
-    } 
+    }
     catch{
         document.getElementById("enablesugardrops").checked = true
     }
@@ -1168,7 +1168,7 @@ function importLevel(levelData){
 
         cannonSettingAddons.forEach(function(setting){
             let inputElement = document.getElementById(elm + setting)
-            
+
             if (inputElement != null){
                 inputElement.value = levelData[elm + setting] || ""
             }
@@ -1245,7 +1245,7 @@ function exportLevel(){
             let toLoopThrough = [].concat(layers, ["color"])
 
             toLoopThrough.splice(toLoopThrough.indexOf("candy_cannon"), 1)
-            
+
             toLoopThrough.forEach(function(layer){
                 //i is column
                 //levelArray.length is row
@@ -1266,7 +1266,7 @@ function exportLevel(){
                         element='084'
                     }
                 }
- 
+
                 if (element=="991" || element=="015") {
                     //element="011991"
                 }
@@ -1291,7 +1291,7 @@ function exportLevel(){
             if (object.getAttribute("normal") !== "002" && object.getAttribute("color") == "002"){
                 totalCode.splice(totalCode.indexOf("002"), 1)
             }
-            
+
             if (totalCode.includes("001") && totalCode.length != 1){
                 totalCode.splice(totalCode.indexOf("001"), 1)
             }
@@ -1341,7 +1341,7 @@ function exportLevel(){
         }
 
         level['moveLimit'] = moves
-        
+
     }
     {
         let frogstomachsize = document.getElementById("frogstomachsize").value
@@ -1353,10 +1353,10 @@ function exportLevel(){
         }
 
         level['frogStomachSize'] = frogstomachsize
-        
+
     }
-    
-    
+
+
 
 
 
@@ -1537,13 +1537,13 @@ function createNewTable(clear = false){
                     updateElmState(object)
                 }, false)
 
-                object.onmouseover = function(event) {  
-                    event.preventDefault();  
+                object.onmouseover = function(event) {
+                    event.preventDefault();
                     this.classList.add("selected")
                     if (isDown){
                         updateTile(this)
                     }
-                  }  
+                  }
 
                   object.onmousedown = function(event){
                     event.preventDefault()
@@ -1554,20 +1554,20 @@ function createNewTable(clear = false){
 
                     }
                   }
-                  object.onmouseout = function(event) {  
-                    event.preventDefault();  
+                  object.onmouseout = function(event) {
+                    event.preventDefault();
                     try{
                         this.classList.remove("selected")
                     }
                     catch{}
                   }
 
-                
+
                 if (!clear){
                     object.setAttribute('normal', "002")
                     object.setAttribute('color', "002")
                 }
-                object.setAttribute('tile', "001")  
+                object.setAttribute('tile', "001")
 
                 let ammo = object.appendChild(document.createElement("div"))
                 ammo.classList.add("ammocontainer")
@@ -1592,7 +1592,7 @@ function createNewTable(clear = false){
                         object.setAttribute("candy_entrance", "026")
                         object.setAttribute("candy_cannon", '["005"]')
                     }
-                    
+
                     image = object.querySelector(".normal")
                     image.src = elementsFolder + elements_ids["002"] + ".png"
                     image.classList.add("small")
